@@ -238,6 +238,7 @@
 
     .release-meta {
       max-width: 520px;
+
       padding-top: 95px;
     }
 
@@ -337,25 +338,111 @@
        LIVE
     ========================= */
 
+    .live-layout {
+      max-width: 1450px;
+
+      margin-top: 90px;
+
+      display: grid;
+
+      grid-template-columns: 1.15fr 0.85fr;
+
+      gap: clamp(70px, 8vw, 140px);
+
+      align-items: start;
+    }
+
     .shows {
-      margin-top: 80px;
+      border-top: 1px solid rgba(255,255,255,0.18);
     }
 
     .show {
       display: grid;
 
-      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-columns: 50px 1.35fr 1fr;
 
-      padding: 26px 0;
+      gap: 20px;
 
-      border-bottom: 1px solid rgba(255,255,255,.13);
+      align-items: center;
 
-      font-size: 13px;
+      padding: 29px 0;
+
+      border-bottom: 1px solid rgba(255,255,255,0.13);
+
+      transition: opacity 0.25s ease;
     }
 
-    .show-city {
-      opacity: 0.45;
+    .show:hover {
+      opacity: 0.55;
+    }
+
+    .show-index {
+      font-size: 9px;
+
+      letter-spacing: 0.14em;
+
+      opacity: 0.28;
+    }
+
+    .show-venue {
+      font-size: 15px;
+
+      letter-spacing: 0.03em;
+    }
+
+    .show-location {
+      font-size: 10px;
+
+      letter-spacing: 0.18em;
+
+      opacity: 0.42;
+
       text-align: right;
+    }
+
+    .live-image {
+      width: 100%;
+
+      overflow: hidden;
+
+      background: #111;
+    }
+
+    .live-image img {
+      width: 100%;
+
+      aspect-ratio: 4 / 5;
+
+      object-fit: cover;
+
+      object-position: center center;
+
+      filter: brightness(0.88);
+
+      transition:
+        transform 0.9s cubic-bezier(.2,.7,.2,1),
+        filter 0.4s ease;
+    }
+
+    .live-image:hover img {
+      transform: scale(1.012);
+
+      filter: brightness(1);
+    }
+
+    .live-caption {
+      margin-top: 14px;
+
+      display: flex;
+      justify-content: space-between;
+
+      gap: 20px;
+
+      font-size: 8px;
+
+      letter-spacing: 0.18em;
+
+      opacity: 0.3;
     }
 
 
@@ -429,6 +516,7 @@
 
       .music-release {
         grid-template-columns: minmax(260px, 420px) minmax(260px, 1fr);
+
         gap: 50px;
       }
 
@@ -438,6 +526,12 @@
 
       .release-meta {
         padding-top: 40px;
+      }
+
+      .live-layout {
+        grid-template-columns: 1fr 0.8fr;
+
+        gap: 55px;
       }
 
     }
@@ -517,6 +611,7 @@
 
       .release-meta {
         max-width: none;
+
         padding-top: 0;
       }
 
@@ -531,15 +626,33 @@
 
       /* LIVE MOBILE */
 
-      .show {
+      .live-layout {
         grid-template-columns: 1fr;
 
-        gap: 6px;
+        gap: 55px;
+
+        margin-top: 60px;
       }
 
-      .show-city {
-        text-align: left;
+      .show {
+        grid-template-columns: 35px 1fr;
+
+        gap: 12px;
       }
+
+      .show-location {
+        grid-column: 2;
+
+        text-align: left;
+
+        margin-top: -5px;
+      }
+
+      .live-image {
+        width: 85%;
+        margin-left: auto;
+      }
+
 
       footer {
         gap: 20px;
@@ -639,7 +752,6 @@
       </div>
 
 
-
       <div class="release-meta">
 
 
@@ -672,10 +784,7 @@
         </div>
 
 
-        <a
-          class="listen"
-          href="#"
-        >
+        <a class="listen" href="#">
 
           <span>
             LISTEN
@@ -710,70 +819,123 @@
     </h2>
 
 
-    <div class="shows">
+    <div class="live-layout">
 
 
-      <div class="show">
+      <div class="shows">
 
-        <div>
-          KITKAT CLUB
+
+        <div class="show">
+
+          <div class="show-index">
+            01
+          </div>
+
+          <div class="show-venue">
+            KITKAT CLUB
+          </div>
+
+          <div class="show-location">
+            BERLIN · DE
+          </div>
+
         </div>
 
-        <div>
-          BERLIN
+
+        <div class="show">
+
+          <div class="show-index">
+            02
+          </div>
+
+          <div class="show-venue">
+            CULTURE BOX
+          </div>
+
+          <div class="show-location">
+            COPENHAGEN · DK
+          </div>
+
         </div>
 
-        <div class="show-city">
-          GERMANY
+
+        <div class="show">
+
+          <div class="show-index">
+            03
+          </div>
+
+          <div class="show-venue">
+            LA TERRRAZZA
+          </div>
+
+          <div class="show-location">
+            BARCELONA · ES
+          </div>
+
         </div>
+
+
+        <div class="show">
+
+          <div class="show-index">
+            04
+          </div>
+
+          <div class="show-venue">
+            CARPE DIEM
+          </div>
+
+          <div class="show-location">
+            MOST · CZ
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-index">
+            05
+          </div>
+
+          <div class="show-venue">
+            WURZELFESTIVAL
+          </div>
+
+          <div class="show-location">
+            GERMANY
+          </div>
+
+        </div>
+
 
       </div>
 
 
-      <div class="show">
 
-        <div>
-          CULTURE BOX
+      <div>
+
+        <div class="live-image">
+
+          <img
+            src="Chris-Gavin_Live-CarpeDiem-2025_KarelRichtr_01.jpg"
+            alt="Chris Gavin performing live at Carpe Diem"
+          >
+
         </div>
 
-        <div>
-          COPENHAGEN
-        </div>
 
-        <div class="show-city">
-          DENMARK
-        </div>
+        <div class="live-caption">
 
-      </div>
+          <span>
+            LIVE
+          </span>
 
+          <span>
+            CARPE DIEM · 2025
+          </span>
 
-      <div class="show">
-
-        <div>
-          LA TERRRAZZA
-        </div>
-
-        <div>
-          BARCELONA
-        </div>
-
-        <div class="show-city">
-          SPAIN
-        </div>
-
-      </div>
-
-
-      <div class="show">
-
-        <div>
-          WURZELFESTIVAL
-        </div>
-
-        <div></div>
-
-        <div class="show-city">
-          GERMANY
         </div>
 
       </div>
@@ -814,821 +976,7 @@
 
   <!-- CONTACT -->
 
-  <section
-    id="contact"
-    class="contact"
-  >
-
-
-    <div>
-
-
-      <div class="section-number">
-        04 — CONTACT
-      </div>
-
-
-      <h2 class="section-title">
-        LET'S<br>
-        TALK.
-      </h2>
-
-
-      <div class="contact-links">
-
-        <a href="#">
-          BOOKING
-        </a>
-
-        <a
-          href="https://www.instagram.com/djchrisgavin/"
-          target="_blank"
-        >
-          INSTAGRAM ↗
-        </a>
-
-        <a href="#">
-          SPOTIFY ↗
-        </a>
-
-        <a href="#">
-          SOUNDCLOUD ↗
-        </a>
-
-      </div>
-
-
-    </div>
-
-
-    <footer>
-
-      <div>
-        © 2026 CHRIS GAVIN
-      </div>
-
-      <div>
-        MARSEILLE — FRANCE
-      </div>
-
-    </footer>
-
-
-  </section>
-
-
-</main>
-
-
-</body>
-
-</html>      font-size: 14px;
-      letter-spacing: 0.08em;
-    }
-
-    nav {
-      display: flex;
-      gap: 30px;
-
-      font-size: 11px;
-      letter-spacing: 0.14em;
-    }
-
-    nav a {
-      opacity: 0.7;
-      transition: opacity 0.25s ease;
-    }
-
-    nav a:hover {
-      opacity: 1;
-    }
-
-
-    /* =========================
-       HERO
-    ========================= */
-
-    .hero {
-      min-height: 100vh;
-
-      position: relative;
-
-      display: flex;
-      align-items: flex-end;
-
-      overflow: hidden;
-
-      padding: 40px;
-
-      background-image:
-        linear-gradient(
-          to bottom,
-          rgba(0,0,0,0.08) 0%,
-          rgba(0,0,0,0.03) 40%,
-          rgba(0,0,0,0.25) 68%,
-          rgba(0,0,0,0.82) 100%
-        ),
-        url("chris-gavin-hero.jpeg");
-
-      background-size: cover;
-      background-position: center center;
-      background-repeat: no-repeat;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-
-      width: 100%;
-
-      padding-bottom: 85px;
-    }
-
-    h1 {
-      margin: 0;
-
-      font-size: clamp(64px, 10.3vw, 165px);
-
-      font-weight: 400;
-
-      letter-spacing: -0.075em;
-
-      line-height: 0.82;
-
-      max-width: 95%;
-    }
-
-    .subtitle {
-      margin-top: 30px;
-
-      font-size: 11px;
-
-      letter-spacing: 0.26em;
-
-      opacity: 0.92;
-    }
-
-    .scroll {
-      position: absolute;
-
-      bottom: 28px;
-      right: 40px;
-
-      font-size: 8px;
-
-      letter-spacing: 0.24em;
-
-      opacity: 0.3;
-    }
-
-
-    /* =========================
-       GLOBAL
-    ========================= */
-
-    section {
-      padding: 135px 40px;
-
-      border-top: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .section-number {
-      margin-bottom: 55px;
-
-      font-size: 10px;
-
-      letter-spacing: 0.2em;
-
-      opacity: 0.42;
-    }
-
-    .section-title {
-      margin: 0;
-
-      font-size: clamp(48px, 7vw, 110px);
-
-      font-weight: 400;
-
-      letter-spacing: -0.055em;
-
-      line-height: 0.95;
-    }
-
-
-    /* =========================
-       MUSIC
-    ========================= */
-
-    .music-release {
-      max-width: 1400px;
-
-      margin-top: 90px;
-
-      display: grid;
-
-      grid-template-columns:
-        minmax(420px, 620px)
-        minmax(300px, 1fr);
-
-      gap: clamp(60px, 8vw, 140px);
-
-      align-items: center;
-    }
-
-    .cover-wrap {
-      width: 100%;
-      max-width: 620px;
-
-      overflow: hidden;
-
-      background: #111;
-    }
-
-    .cover-wrap img {
-      width: 100%;
-      height: auto;
-
-      transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
-    }
-
-    .cover-wrap:hover img {
-      transform: scale(1.012);
-    }
-
-    .release-meta {
-      max-width: 520px;
-    }
-
-    .release-label {
-      display: flex;
-      align-items: center;
-
-      gap: 12px;
-
-      margin-bottom: 40px;
-
-      font-size: 9px;
-
-      letter-spacing: 0.24em;
-
-      opacity: 0.55;
-    }
-
-    .release-dot {
-      width: 6px;
-      height: 6px;
-
-      border-radius: 50%;
-
-      background: #a42018;
-    }
-
-    .release-meta h3 {
-      margin: 0;
-
-      font-size: clamp(55px, 6.5vw, 100px);
-
-      font-weight: 400;
-
-      letter-spacing: -0.06em;
-
-      line-height: 0.85;
-    }
-
-    .release-artist {
-      margin-top: 30px;
-
-      font-size: 11px;
-
-      letter-spacing: 0.19em;
-
-      opacity: 0.6;
-    }
-
-    .release-remix {
-      margin-top: 12px;
-
-      font-size: 10px;
-
-      letter-spacing: 0.16em;
-
-      opacity: 0.38;
-    }
-
-    .release-year {
-      margin-top: 12px;
-
-      font-size: 10px;
-
-      letter-spacing: 0.18em;
-
-      opacity: 0.3;
-    }
-
-    .listen {
-      width: 260px;
-
-      margin-top: 60px;
-
-      padding: 17px 0;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      border-top: 1px solid rgba(255,255,255,.35);
-      border-bottom: 1px solid rgba(255,255,255,.35);
-
-      font-size: 10px;
-
-      letter-spacing: 0.2em;
-
-      transition: opacity 0.25s ease;
-    }
-
-    .listen:hover {
-      opacity: 0.55;
-    }
-
-
-    /* =========================
-       LIVE
-    ========================= */
-
-    .shows {
-      margin-top: 80px;
-    }
-
-    .show {
-      display: grid;
-
-      grid-template-columns: 1fr 2fr 1fr;
-
-      padding: 26px 0;
-
-      border-bottom: 1px solid rgba(255,255,255,.13);
-
-      font-size: 13px;
-    }
-
-    .show-city {
-      opacity: 0.45;
-      text-align: right;
-    }
-
-
-    /* =========================
-       ABOUT
-    ========================= */
-
-    .about-text {
-      max-width: 1050px;
-
-      margin-top: 80px;
-
-      font-size: clamp(26px, 4vw, 58px);
-
-      letter-spacing: -0.035em;
-
-      line-height: 1.08;
-    }
-
-    .about-text span {
-      opacity: 0.35;
-    }
-
-
-    /* =========================
-       CONTACT
-    ========================= */
-
-    .contact {
-      min-height: 80vh;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: space-between;
-    }
-
-    .contact-links {
-      margin-top: 100px;
-
-      display: flex;
-
-      gap: 35px;
-
-      flex-wrap: wrap;
-
-      font-size: 11px;
-
-      letter-spacing: 0.18em;
-    }
-
-    footer {
-      padding-top: 100px;
-
-      font-size: 10px;
-
-      opacity: 0.35;
-
-      display: flex;
-
-      justify-content: space-between;
-    }
-
-
-    /* =========================
-       TABLET
-    ========================= */
-
-    @media (max-width: 1050px) {
-
-      .music-release {
-        grid-template-columns: 1fr 0.8fr;
-
-        gap: 60px;
-      }
-
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
-    @media (max-width: 700px) {
-
-      header {
-        padding: 22px 20px;
-      }
-
-      nav {
-        gap: 14px;
-      }
-
-      nav a:nth-child(2),
-      nav a:nth-child(3) {
-        display: none;
-      }
-
-      section {
-        padding: 100px 20px;
-      }
-
-      .hero {
-        padding: 20px;
-
-        background-position: 58% center;
-      }
-
-      .hero-content {
-        padding-bottom: 90px;
-      }
-
-      h1 {
-        font-size: 17.5vw;
-
-        line-height: 0.84;
-
-        max-width: 100%;
-      }
-
-      .subtitle {
-        font-size: 9px;
-
-        letter-spacing: 0.18em;
-
-        line-height: 1.5;
-      }
-
-      .scroll {
-        right: 20px;
-
-        bottom: 20px;
-      }
-
-
-      /* MUSIC MOBILE */
-
-      .music-release {
-        display: grid;
-
-        grid-template-columns: 1fr;
-
-        gap: 55px;
-
-        margin-top: 60px;
-      }
-
-      .cover-wrap {
-        max-width: none;
-      }
-
-      .release-meta {
-        max-width: none;
-      }
-
-      .release-meta h3 {
-        font-size: 16vw;
-      }
-
-      .listen {
-        width: 100%;
-      }
-
-
-      /* LIVE MOBILE */
-
-      .show {
-        grid-template-columns: 1fr;
-
-        gap: 6px;
-      }
-
-      .show-city {
-        text-align: left;
-      }
-
-
-      footer {
-        gap: 20px;
-
-        flex-direction: column;
-      }
-
-    }
-
-  </style>
-
-</head>
-
-
-<body>
-
-
-<header>
-
-  <a class="logo" href="#top">
-    CG
-  </a>
-
-  <nav>
-
-    <a href="#music">
-      MUSIC
-    </a>
-
-    <a href="#live">
-      LIVE
-    </a>
-
-    <a href="#about">
-      ABOUT
-    </a>
-
-    <a href="#contact">
-      CONTACT
-    </a>
-
-  </nav>
-
-</header>
-
-
-<main id="top">
-
-
-  <!-- HERO -->
-
-  <section class="hero">
-
-    <div class="hero-content">
-
-      <h1>
-        CHRIS GAVIN
-      </h1>
-
-      <div class="subtitle">
-        DJ · PRODUCER · MARSEILLE
-      </div>
-
-    </div>
-
-    <div class="scroll">
-      SCROLL ↓
-    </div>
-
-  </section>
-
-
-
-  <!-- MUSIC -->
-
-  <section id="music">
-
-    <div class="section-number">
-      01 — SELECTED MUSIC
-    </div>
-
-    <h2 class="section-title">
-      MUSIC
-    </h2>
-
-
-    <div class="music-release">
-
-
-      <div class="cover-wrap">
-
-        <img
-          src="enough-ep.jpg"
-          alt="E-Nough by Chris Gavin"
-        >
-
-      </div>
-
-
-
-      <div class="release-meta">
-
-
-        <div class="release-label">
-
-          <span class="release-dot"></span>
-
-          LATEST RELEASE
-
-        </div>
-
-
-        <h3>
-          E-NOUGH
-        </h3>
-
-
-        <div class="release-artist">
-          CHRIS GAVIN
-        </div>
-
-
-        <div class="release-remix">
-          REMIXES BY BADWOLF & SKAHR
-        </div>
-
-
-        <div class="release-year">
-          2026
-        </div>
-
-
-        <a
-          class="listen"
-          href="#"
-        >
-
-          <span>
-            LISTEN
-          </span>
-
-          <span>
-            ↗
-          </span>
-
-        </a>
-
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- LIVE -->
-
-  <section id="live">
-
-    <div class="section-number">
-      02 — SELECTED SHOWS
-    </div>
-
-    <h2 class="section-title">
-      LIVE
-    </h2>
-
-
-    <div class="shows">
-
-
-      <div class="show">
-
-        <div>
-          KITKAT CLUB
-        </div>
-
-        <div>
-          BERLIN
-        </div>
-
-        <div class="show-city">
-          GERMANY
-        </div>
-
-      </div>
-
-
-      <div class="show">
-
-        <div>
-          CULTURE BOX
-        </div>
-
-        <div>
-          COPENHAGEN
-        </div>
-
-        <div class="show-city">
-          DENMARK
-        </div>
-
-      </div>
-
-
-      <div class="show">
-
-        <div>
-          LA TERRRAZZA
-        </div>
-
-        <div>
-          BARCELONA
-        </div>
-
-        <div class="show-city">
-          SPAIN
-        </div>
-
-      </div>
-
-
-      <div class="show">
-
-        <div>
-          WURZELFESTIVAL
-        </div>
-
-        <div></div>
-
-        <div class="show-city">
-          GERMANY
-        </div>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="section-number">
-      03 — ABOUT
-    </div>
-
-    <h2 class="section-title">
-      CHRIS GAVIN
-    </h2>
-
-    <div class="about-text">
-
-      DJ and producer based in Marseille.
-
-      <span>
-        Moving between house, progressive electronics,
-        melodic techno and late-night club music.
-      </span>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- CONTACT -->
-
-  <section
-    id="contact"
-    class="contact"
-  >
+  <section id="contact" class="contact">
 
 
     <div>
