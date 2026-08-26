@@ -1,120 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    Chris Gavin — DJ, Producer & Artistic Director
-  </title>
+  <title>Chris Gavin — DJ, Producer & Artistic Director</title>
 
   <meta
     name="description"
-    content="Official website of Chris Gavin, Marseille-based DJ, producer and artistic director of Danceteria. House, progressive electronics, melodic techno and indie dance."
+    content="Marseille-based DJ, producer and artistic director, moving between house, progressive electronics, melodic techno and indie dance."
   >
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Chris Gavin">
+  <meta name="theme-color" content="#090909">
 
-  <meta
-    name="author"
-    content="Chris Gavin"
-  >
-
-  <meta
-    name="theme-color"
-    content="#090909"
-  >
-
-
-  <!-- FAVICON -->
-
-  <link
-    rel="icon"
-    href="favicon.svg"
-    type="image/svg+xml"
-  >
-
-
-  <!-- CANONICAL -->
-
-  <link
-    rel="canonical"
-    href="https://djchrisgavin.com/"
-  >
-
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://djchrisgavin.com/">
 
   <!-- OPEN GRAPH -->
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:title"
-    content="Chris Gavin — DJ, Producer & Artistic Director"
-  >
-
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chris Gavin — DJ, Producer & Artistic Director">
   <meta
     property="og:description"
-    content="Marseille-based DJ, producer and artistic director. House, progressive electronics, melodic techno and indie dance."
+    content="Marseille-based DJ, producer and artistic director, moving between house, progressive electronics, melodic techno and indie dance."
   >
+  <meta property="og:url" content="https://djchrisgavin.com/">
+  <meta property="og:image" content="https://djchrisgavin.com/chris-gavin-hero.jpeg">
+  <meta property="og:site_name" content="Chris Gavin">
 
-  <meta
-    property="og:url"
-    content="https://djchrisgavin.com/"
-  >
-
-  <meta
-    property="og:image"
-    content="https://djchrisgavin.com/chris-gavin-hero.jpeg"
-  >
-
-  <meta
-    property="og:image:alt"
-    content="Chris Gavin performing live"
-  >
-
-  <meta
-    property="og:site_name"
-    content="Chris Gavin"
-  >
-
-
-  <!-- SOCIAL PREVIEW -->
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-  <meta
-    name="twitter:title"
-    content="Chris Gavin — DJ, Producer & Artistic Director"
-  >
-
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chris Gavin — DJ, Producer & Artistic Director">
   <meta
     name="twitter:description"
-    content="Marseille-based DJ, producer and artistic director."
+    content="Marseille-based DJ, producer and artistic director, moving between house, progressive electronics, melodic techno and indie dance."
   >
-
-  <meta
-    name="twitter:image"
-    content="https://djchrisgavin.com/chris-gavin-hero.jpeg"
-  >
-
+  <meta name="twitter:image" content="https://djchrisgavin.com/chris-gavin-hero.jpeg">
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -125,270 +49,153 @@
 
     body {
       margin: 0;
-
       background: #090909;
-
       color: #f1f0eb;
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+      font-family: Arial, Helvetica, sans-serif;
       font-weight: 400;
-
       overflow-x: hidden;
     }
 
     a {
       color: inherit;
-
       text-decoration: none;
     }
 
     img {
       display: block;
-
       width: 100%;
     }
 
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
-
     header {
       position: fixed;
-
       top: 0;
       left: 0;
-
       width: 100%;
-
       padding: 28px 40px;
-
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
-
       z-index: 100;
-
       mix-blend-mode: difference;
     }
 
     .logo {
       font-size: 14px;
-
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
     }
 
     nav {
       display: flex;
-
       gap: 30px;
-
       font-size: 11px;
-
-      letter-spacing: 0.14em;
+      letter-spacing: .14em;
     }
 
     nav a {
-      opacity: 0.7;
-
-      transition:
-        opacity
-        0.25s
-        ease;
+      opacity: .7;
+      transition: opacity .25s ease;
     }
 
     nav a:hover {
       opacity: 1;
     }
 
-
-    /* =========================================================
-       HERO
-    ========================================================= */
-
     .hero {
       min-height: 100vh;
-
       position: relative;
-
       display: flex;
-
       align-items: flex-end;
-
       overflow: hidden;
-
       padding: 40px;
-
       background-image:
-
         linear-gradient(
-
           to bottom,
-
-          rgba(0,0,0,0.08) 0%,
-
-          rgba(0,0,0,0.03) 40%,
-
-          rgba(0,0,0,0.25) 68%,
-
-          rgba(0,0,0,0.82) 100%
-
+          rgba(0,0,0,.08) 0%,
+          rgba(0,0,0,.03) 40%,
+          rgba(0,0,0,.25) 68%,
+          rgba(0,0,0,.82) 100%
         ),
-
         url("chris-gavin-hero.jpeg");
-
       background-size: cover;
-
       background-position: center center;
-
       background-repeat: no-repeat;
     }
 
     .hero-content {
       position: relative;
-
       z-index: 2;
-
       width: 100%;
-
       padding-bottom: 85px;
     }
 
     h1 {
       margin: 0;
-
       max-width: 95%;
-
-      font-size:
-        clamp(
-          64px,
-          10.3vw,
-          165px
-        );
-
+      font-size: clamp(64px, 10.3vw, 165px);
       font-weight: 400;
-
-      letter-spacing: -0.075em;
-
-      line-height: 0.82;
+      letter-spacing: -.075em;
+      line-height: .82;
     }
 
     .subtitle {
       margin-top: 30px;
-
       font-size: 11px;
-
-      letter-spacing: 0.23em;
-
-      opacity: 0.92;
+      letter-spacing: .23em;
+      opacity: .92;
     }
 
     .scroll {
       position: absolute;
-
       bottom: 28px;
       right: 40px;
-
       font-size: 8px;
-
-      letter-spacing: 0.24em;
-
-      opacity: 0.3;
+      letter-spacing: .24em;
+      opacity: .3;
     }
-
-
-    /* =========================================================
-       GLOBAL SECTIONS
-    ========================================================= */
 
     section {
       padding: 135px 40px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,0.12);
-
+      border-top: 1px solid rgba(255,255,255,.12);
       scroll-margin-top: 90px;
     }
 
     .section-number {
       margin-bottom: 55px;
-
       font-size: 10px;
-
-      letter-spacing: 0.2em;
-
-      opacity: 0.42;
+      letter-spacing: .2em;
+      opacity: .42;
     }
 
     .section-title {
       margin: 0;
-
-      font-size:
-        clamp(
-          48px,
-          7vw,
-          110px
-        );
-
+      font-size: clamp(48px, 7vw, 110px);
       font-weight: 400;
-
-      letter-spacing: -0.055em;
-
-      line-height: 0.95;
+      letter-spacing: -.055em;
+      line-height: .95;
     }
 
-
-    /* =========================================================
-       MUSIC
-    ========================================================= */
+    /* MUSIC */
 
     .music-release {
       max-width: 1250px;
-
       margin-top: 90px;
-
       display: grid;
-
-      grid-template-columns:
-        minmax(280px, 460px)
-        minmax(320px, 520px);
-
-      gap:
-        clamp(
-          70px,
-          9vw,
-          150px
-        );
-
+      grid-template-columns: minmax(280px,460px) minmax(320px,520px);
+      gap: clamp(70px,9vw,150px);
       align-items: start;
     }
 
     .cover-wrap {
       width: 100%;
-
       max-width: 460px;
-
       overflow: hidden;
-
       background: #111;
     }
 
     .cover-wrap img {
       width: 100%;
-
       height: auto;
-
-      transition:
-        transform
-        0.8s
-        cubic-bezier(.2,.7,.2,1);
+      transition: transform .8s cubic-bezier(.2,.7,.2,1);
     }
 
     .cover-wrap:hover img {
@@ -397,312 +204,240 @@
 
     .release-meta {
       max-width: 520px;
-
       padding-top: 95px;
     }
 
     .release-label {
       display: flex;
-
       align-items: center;
-
       gap: 12px;
-
       margin-bottom: 36px;
-
       font-size: 9px;
-
-      letter-spacing: 0.24em;
-
-      opacity: 0.55;
+      letter-spacing: .24em;
+      opacity: .55;
     }
 
     .release-dot {
       width: 6px;
-
       height: 6px;
-
       border-radius: 50%;
-
       background: #a42018;
     }
 
     .release-meta h3 {
       margin: 0;
-
-      font-size:
-        clamp(
-          52px,
-          6vw,
-          92px
-        );
-
+      font-size: clamp(52px,6vw,92px);
       font-weight: 400;
-
-      letter-spacing: -0.06em;
-
-      line-height: 0.86;
+      letter-spacing: -.06em;
+      line-height: .86;
     }
 
     .release-artist {
       margin-top: 28px;
-
       font-size: 11px;
-
-      letter-spacing: 0.19em;
-
-      opacity: 0.6;
+      letter-spacing: .19em;
+      opacity: .6;
     }
 
     .release-remix {
       margin-top: 12px;
-
       font-size: 10px;
-
-      letter-spacing: 0.16em;
-
-      opacity: 0.38;
+      letter-spacing: .16em;
+      opacity: .38;
     }
 
     .release-year {
       margin-top: 12px;
-
       font-size: 10px;
-
-      letter-spacing: 0.18em;
-
-      opacity: 0.3;
+      letter-spacing: .18em;
+      opacity: .3;
     }
 
     .listen {
       width: 240px;
-
       margin-top: 55px;
-
       padding: 17px 0;
-
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,.35);
-
-      border-bottom:
-        1px solid
-        rgba(255,255,255,.35);
-
+      border-top: 1px solid rgba(255,255,255,.35);
+      border-bottom: 1px solid rgba(255,255,255,.35);
       font-size: 10px;
-
-      letter-spacing: 0.2em;
-
-      transition:
-        opacity
-        0.25s
-        ease;
+      letter-spacing: .2em;
+      transition: opacity .25s ease;
     }
 
     .listen:hover {
-      opacity: 0.55;
+      opacity: .55;
     }
 
     .arrow-text {
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+      font-family: Arial, Helvetica, sans-serif;
       font-variant-emoji: text;
     }
 
+    /* SELECTED TRACKS */
 
-    /* =========================================================
-       LIVE
-    ========================================================= */
+    .selected-tracks-block {
+      max-width: 1250px;
+      margin-top: 150px;
+    }
+
+    .selected-tracks-heading {
+      margin-bottom: 35px;
+      font-size: 10px;
+      letter-spacing: .22em;
+      opacity: .42;
+    }
+
+    .tracks {
+      border-top: 1px solid rgba(255,255,255,.2);
+    }
+
+    .track {
+      display: grid;
+      grid-template-columns: 65px minmax(0,1fr) 130px 35px;
+      gap: 25px;
+      align-items: center;
+      padding: 24px 0;
+      border-bottom: 1px solid rgba(255,255,255,.13);
+      transition: opacity .25s ease;
+    }
+
+    .track:hover {
+      opacity: .55;
+    }
+
+    .track-number {
+      font-size: 9px;
+      letter-spacing: .16em;
+      opacity: .3;
+    }
+
+    .track-title {
+      font-size: 14px;
+      letter-spacing: .035em;
+    }
+
+    .track-platform {
+      text-align: right;
+      font-size: 8px;
+      letter-spacing: .18em;
+      opacity: .35;
+    }
+
+    .track-arrow {
+      text-align: right;
+      font-size: 13px;
+      opacity: .5;
+    }
+
+    /* LIVE */
 
     .live-intro {
       margin-top: 20px;
-
       font-size: 9px;
-
-      letter-spacing: 0.2em;
-
-      opacity: 0.35;
+      letter-spacing: .2em;
+      opacity: .35;
     }
 
     .live-layout {
       max-width: 1500px;
-
       margin-top: 90px;
-
       display: grid;
-
-      grid-template-columns:
-        minmax(550px, 1.25fr)
-        minmax(300px, 0.75fr);
-
-      gap:
-        clamp(
-          60px,
-          8vw,
-          140px
-        );
-
+      grid-template-columns: minmax(550px,1.25fr) minmax(300px,.75fr);
+      gap: clamp(60px,8vw,140px);
       align-items: start;
     }
 
     .shows {
-      border-top:
-        1px solid
-        rgba(255,255,255,0.2);
+      border-top: 1px solid rgba(255,255,255,.2);
     }
 
     .show {
       display: grid;
-
-      grid-template-columns:
-        100px
-        minmax(220px, 1fr)
-        190px;
-
+      grid-template-columns: 100px minmax(220px,1fr) 190px;
       gap: 25px;
-
       align-items: center;
-
       padding: 23px 0;
-
-      border-bottom:
-        1px solid
-        rgba(255,255,255,0.13);
-
-      transition:
-        opacity
-        0.25s
-        ease;
+      border-bottom: 1px solid rgba(255,255,255,.13);
+      transition: opacity .25s ease;
     }
 
     .show:hover {
-      opacity: 0.55;
+      opacity: .55;
     }
 
     .show-date {
       font-size: 9px;
-
-      letter-spacing: 0.13em;
-
-      opacity: 0.33;
+      letter-spacing: .13em;
+      opacity: .33;
     }
 
     .show-venue {
       font-size: 13px;
-
-      letter-spacing: 0.025em;
+      letter-spacing: .025em;
     }
 
     .show-detail {
       margin-top: 5px;
-
       font-size: 8px;
-
-      letter-spacing: 0.15em;
-
-      opacity: 0.32;
+      letter-spacing: .15em;
+      opacity: .32;
     }
 
     .show-location {
       font-size: 9px;
-
-      letter-spacing: 0.17em;
-
-      opacity: 0.4;
-
+      letter-spacing: .17em;
+      opacity: .4;
       text-align: right;
     }
 
     .live-visual {
       position: sticky;
-
       top: 110px;
     }
 
     .live-image {
       width: 100%;
-
       overflow: hidden;
-
       background: #111;
     }
 
     .live-image img {
       width: 100%;
-
-      aspect-ratio: 4 / 5;
-
+      aspect-ratio: 4/5;
       object-fit: cover;
-
       object-position: center center;
-
-      filter:
-        brightness(0.88);
-
+      filter: brightness(.88);
       transition:
-        transform
-          0.9s
-          cubic-bezier(.2,.7,.2,1),
-
-        filter
-          0.4s
-          ease;
+        transform .9s cubic-bezier(.2,.7,.2,1),
+        filter .4s ease;
     }
 
     .live-image:hover img {
       transform: scale(1.012);
-
       filter: brightness(1);
     }
 
     .live-caption {
       margin-top: 14px;
-
       display: flex;
-
       justify-content: space-between;
-
       gap: 20px;
-
       font-size: 8px;
-
-      letter-spacing: 0.18em;
-
-      opacity: 0.3;
+      letter-spacing: .18em;
+      opacity: .3;
     }
 
-
-    /* =========================================================
-       ABOUT
-    ========================================================= */
+    /* ABOUT */
 
     .about-layout {
       max-width: 1450px;
-
       margin-top: 90px;
-
       display: grid;
-
-      grid-template-columns:
-        minmax(420px, 0.9fr)
-        minmax(420px, 1.1fr);
-
-      gap:
-        clamp(
-          70px,
-          9vw,
-          150px
-        );
-
+      grid-template-columns: minmax(420px,.9fr) minmax(420px,1.1fr);
+      gap: clamp(70px,9vw,150px);
       align-items: start;
     }
 
@@ -712,88 +447,54 @@
 
     .about-lead {
       margin: 0;
-
       max-width: 720px;
-
-      font-size:
-        clamp(
-          30px,
-          3.6vw,
-          56px
-        );
-
+      font-size: clamp(30px,3.6vw,56px);
       line-height: 1.05;
-
-      letter-spacing: -0.045em;
+      letter-spacing: -.045em;
     }
 
     .about-lead .soft {
-      opacity: 0.38;
+      opacity: .38;
     }
 
     .about-meta {
       margin-top: 75px;
-
       max-width: 560px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,0.15);
+      border-top: 1px solid rgba(255,255,255,.15);
     }
 
     .about-row {
       display: grid;
-
-      grid-template-columns:
-        110px
-        1fr;
-
+      grid-template-columns: 110px 1fr;
       gap: 30px;
-
       padding: 17px 0;
-
-      border-bottom:
-        1px solid
-        rgba(255,255,255,0.12);
-
+      border-bottom: 1px solid rgba(255,255,255,.12);
       font-size: 9px;
-
-      letter-spacing: 0.16em;
+      letter-spacing: .16em;
     }
 
     .about-key {
-      opacity: 0.28;
+      opacity: .28;
     }
 
     .about-value {
-      opacity: 0.65;
+      opacity: .65;
     }
 
     .about-photo {
       width: 100%;
-
       max-width: 580px;
-
       margin-left: auto;
-
       overflow: hidden;
-
       background: #111;
     }
 
     .about-photo img {
       width: 100%;
-
-      aspect-ratio: 4 / 5;
-
+      aspect-ratio: 4/5;
       object-fit: cover;
-
       object-position: center center;
-
-      transition:
-        transform
-        0.9s
-        cubic-bezier(.2,.7,.2,1);
+      transition: transform .9s cubic-bezier(.2,.7,.2,1);
     }
 
     .about-photo:hover img {
@@ -802,167 +503,92 @@
 
     .about-photo-caption {
       width: 100%;
-
       max-width: 580px;
-
-      margin:
-        14px
-        0
-        0
-        auto;
-
+      margin: 14px 0 0 auto;
       display: flex;
-
       justify-content: space-between;
-
       gap: 20px;
-
       font-size: 8px;
-
-      letter-spacing: 0.17em;
-
-      opacity: 0.28;
+      letter-spacing: .17em;
+      opacity: .28;
     }
 
     .epk-link {
       display: inline-flex;
-
       justify-content: space-between;
-
       width: 260px;
-
       margin-top: 60px;
-
       padding: 17px 0;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,0.35);
-
-      border-bottom:
-        1px solid
-        rgba(255,255,255,0.35);
-
+      border-top: 1px solid rgba(255,255,255,.35);
+      border-bottom: 1px solid rgba(255,255,255,.35);
       font-size: 10px;
-
-      letter-spacing: 0.2em;
-
-      transition:
-        opacity
-        0.25s
-        ease;
+      letter-spacing: .2em;
+      transition: opacity .25s ease;
     }
 
     .epk-link:hover {
-      opacity: 0.55;
+      opacity: .55;
     }
 
-
-    /* =========================================================
-       CONTACT
-    ========================================================= */
+    /* CONTACT */
 
     .contact {
       min-height: 80vh;
-
       display: flex;
-
       flex-direction: column;
-
       justify-content: space-between;
     }
 
     .contact-links {
       margin-top: 100px;
-
       display: flex;
-
       gap: 35px;
-
       flex-wrap: wrap;
     }
 
     .contact-link {
       padding: 14px 0;
-
       font-size: 11px;
-
-      letter-spacing: 0.18em;
-
-      border-bottom:
-        1px solid
-        rgba(255,255,255,0.25);
-
+      letter-spacing: .18em;
+      border-bottom: 1px solid rgba(255,255,255,.25);
       transition:
-        opacity 0.25s ease,
-        border-color 0.25s ease;
+        opacity .25s ease,
+        border-color .25s ease;
     }
 
     .contact-link:hover {
-      opacity: 0.55;
-
-      border-color:
-        rgba(255,255,255,0.6);
+      opacity: .55;
+      border-color: rgba(255,255,255,.6);
     }
 
     .booking-email {
       display: inline-block;
-
       margin-top: 45px;
-
-      font-size:
-        clamp(
-          18px,
-          2vw,
-          28px
-        );
-
-      letter-spacing: -0.02em;
-
-      opacity: 0.55;
-
-      transition:
-        opacity
-        0.25s
-        ease;
+      font-size: clamp(18px,2vw,28px);
+      letter-spacing: -.02em;
+      opacity: .55;
+      transition: opacity .25s ease;
     }
 
     .booking-email:hover {
       opacity: 1;
     }
 
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
     footer {
       padding-top: 100px;
-
       display: flex;
-
       justify-content: space-between;
-
       font-size: 10px;
-
-      opacity: 0.35;
+      opacity: .35;
     }
 
-
-    /* =========================================================
-       TABLET
-    ========================================================= */
+    /* TABLET */
 
     @media (max-width: 1050px) {
 
       .music-release {
-
-        grid-template-columns:
-          minmax(260px, 420px)
-          minmax(260px, 1fr);
-
+        grid-template-columns: minmax(260px,420px) minmax(260px,1fr);
         gap: 50px;
-
       }
 
       .cover-wrap {
@@ -973,52 +599,28 @@
         padding-top: 40px;
       }
 
-
       .live-layout {
-
-        grid-template-columns:
-          1fr
-          0.65fr;
-
+        grid-template-columns: 1fr .65fr;
         gap: 50px;
-
       }
 
       .show {
-
-        grid-template-columns:
-          85px
-          1fr;
-
+        grid-template-columns: 85px 1fr;
       }
 
       .show-location {
-
         grid-column: 2;
-
         text-align: left;
-
         margin-top: -12px;
-
       }
-
 
       .about-layout {
-
-        grid-template-columns:
-          1fr
-          0.8fr;
-
+        grid-template-columns: 1fr .8fr;
         gap: 55px;
-
       }
-
     }
 
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
+    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -1028,49 +630,32 @@
 
       .logo {
         flex-shrink: 0;
-
         font-size: 13px;
       }
 
       nav {
         display: flex;
-
         gap: 10px;
-
         margin-left: 16px;
-
         font-size: 8px;
-
-        letter-spacing: 0.09em;
-
+        letter-spacing: .09em;
         flex-wrap: nowrap;
-
         white-space: nowrap;
       }
 
       nav a {
         display: block;
-
         white-space: nowrap;
       }
 
       section {
         padding: 100px 20px;
-
         scroll-margin-top: 78px;
       }
 
-
-      /* HERO */
-
       .hero {
-
         padding: 20px;
-
-        background-position:
-          58%
-          center;
-
+        background-position: 58% center;
       }
 
       .hero-content {
@@ -1078,46 +663,27 @@
       }
 
       h1 {
-
         max-width: 100%;
-
         font-size: 17.5vw;
-
-        line-height: 0.84;
-
+        line-height: .84;
       }
 
       .subtitle {
-
         max-width: 330px;
-
         font-size: 9px;
-
-        letter-spacing: 0.16em;
-
+        letter-spacing: .16em;
         line-height: 1.65;
-
       }
 
       .scroll {
-
         right: 20px;
-
         bottom: 20px;
-
       }
 
-
-      /* MUSIC */
-
       .music-release {
-
         grid-template-columns: 1fr;
-
         gap: 45px;
-
         margin-top: 60px;
-
       }
 
       .cover-wrap {
@@ -1125,11 +691,8 @@
       }
 
       .release-meta {
-
         max-width: none;
-
         padding-top: 0;
-
       }
 
       .release-meta h3 {
@@ -1140,29 +703,39 @@
         width: 100%;
       }
 
+      .selected-tracks-block {
+        margin-top: 110px;
+      }
 
-      /* LIVE */
+      .track {
+        grid-template-columns: 38px minmax(0,1fr) 22px;
+        gap: 12px;
+        padding: 21px 0;
+      }
+
+      .track-platform {
+        display: none;
+      }
+
+      .track-title {
+        font-size: 12px;
+        line-height: 1.35;
+      }
+
+      .track-arrow {
+        font-size: 12px;
+      }
 
       .live-layout {
-
         grid-template-columns: 1fr;
-
         gap: 60px;
-
         margin-top: 60px;
-
       }
 
       .show {
-
-        grid-template-columns:
-          75px
-          minmax(0, 1fr);
-
+        grid-template-columns: 75px minmax(0,1fr);
         gap: 14px;
-
         padding: 21px 0;
-
       }
 
       .show-venue {
@@ -1170,13 +743,9 @@
       }
 
       .show-location {
-
         grid-column: 2;
-
         text-align: left;
-
         margin-top: -8px;
-
       }
 
       .live-visual {
@@ -1184,28 +753,18 @@
       }
 
       .live-image {
-
         width: 86%;
-
         margin-left: auto;
-
       }
-
-
-      /* ABOUT */
 
       #about {
         padding-top: 145px;
       }
 
       .about-layout {
-
         grid-template-columns: 1fr;
-
         gap: 65px;
-
         margin-top: 60px;
-
       }
 
       .about-copy {
@@ -1213,15 +772,10 @@
       }
 
       .about-lead {
-
         max-width: 100%;
-
         font-size: 7.8vw;
-
         line-height: 1.08;
-
-        letter-spacing: -0.04em;
-
+        letter-spacing: -.04em;
       }
 
       .about-meta {
@@ -1229,13 +783,8 @@
       }
 
       .about-row {
-
-        grid-template-columns:
-          80px
-          minmax(0, 1fr);
-
+        grid-template-columns: 80px minmax(0,1fr);
         gap: 20px;
-
       }
 
       .about-value {
@@ -1243,11 +792,8 @@
       }
 
       .about-photo {
-
         width: 86%;
-
         margin-left: auto;
-
       }
 
       .about-photo-caption {
@@ -1258,141 +804,76 @@
         width: 100%;
       }
 
-
-      /* CONTACT */
-
       .contact-links {
-
         flex-direction: column;
-
         gap: 10px;
-
         margin-top: 70px;
-
       }
 
       .contact-link {
-
         width: 100%;
-
         display: flex;
-
         justify-content: space-between;
-
         align-items: center;
-
         padding: 18px 0;
-
       }
 
       .booking-email {
-
         max-width: 100%;
-
         font-size: 17px;
-
         overflow-wrap: anywhere;
-
       }
-
-
-      /* FOOTER */
 
       footer {
-
         gap: 20px;
-
         flex-direction: column;
-
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
 <header>
+  <a href="#top" class="logo">CG</a>
 
-  <a
-    class="logo"
-    href="#top"
-    aria-label="Chris Gavin — Home"
-  >
-    CG
-  </a>
-
-
-  <nav aria-label="Main navigation">
-
-    <a href="#music">
-      MUSIC
-    </a>
-
-    <a href="#live">
-      LIVE
-    </a>
-
-    <a href="#about">
-      ABOUT
-    </a>
-
-    <a href="#contact">
-      CONTACT
-    </a>
-
+  <nav>
+    <a href="#music">MUSIC</a>
+    <a href="#live">LIVE</a>
+    <a href="#about">ABOUT</a>
+    <a href="#contact">CONTACT</a>
   </nav>
-
 </header>
 
 
+<!-- HERO -->
 
 <main id="top">
 
-
-  <!-- HERO -->
-
   <section class="hero">
 
-
     <div class="hero-content">
-
-
-      <h1>
-        CHRIS GAVIN
-      </h1>
-
+      <h1>CHRIS GAVIN</h1>
 
       <div class="subtitle">
         DJ · PRODUCER · ARTISTIC DIRECTOR · MARSEILLE
       </div>
-
-
     </div>
-
 
     <div class="scroll">
       SCROLL ↓
     </div>
 
-
   </section>
-
 
 
   <!-- MUSIC -->
 
   <section id="music">
 
-
     <div class="section-number">
       01 — SELECTED MUSIC
     </div>
-
 
     <h2 class="section-title">
       MUSIC
@@ -1401,99 +882,187 @@
 
     <div class="music-release">
 
-
       <div class="cover-wrap">
-
-
         <img
           src="enough-ep.jpg"
-          alt="Chris Gavin — E-Nough EP artwork"
+          alt="Chris Gavin — E-Nough EP"
         >
-
-
       </div>
 
 
       <div class="release-meta">
 
-
         <div class="release-label">
-
-
           <span class="release-dot"></span>
-
-
           SELECTED RELEASE
-
-
         </div>
-
 
         <h3>
           E-NOUGH
         </h3>
 
-
         <div class="release-artist">
           CHRIS GAVIN
         </div>
-
 
         <div class="release-remix">
           REMIXES BY BADWOLF & SKAHR
         </div>
 
-
         <div class="release-year">
           2024
         </div>
 
-
         <a
           class="listen"
-          href="https://songwhip.com/chris-gavin/enough"
+          href="https://open.spotify.com/intl-fr/track/2CYDN3BdzhKFLJEn47KGAo?si=25eb095d53c045dd"
           target="_blank"
           rel="noopener noreferrer"
         >
+          <span>LISTEN</span>
+          <span class="arrow-text">↗︎</span>
+        </a>
 
-          <span>
-            LISTEN
-          </span>
+      </div>
 
-          <span
-            class="arrow-text"
-            aria-hidden="true"
-          >
-            ↗︎
-          </span>
+    </div>
 
+
+    <!-- SELECTED TRACKS -->
+
+    <div class="selected-tracks-block">
+
+      <div class="selected-tracks-heading">
+        SELECTED TRACKS
+      </div>
+
+      <div class="tracks">
+
+
+        <a
+          class="track"
+          href="https://soundcloud.com/djchrisgavin/chris-gavin-udessia-original"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="track-number">01</div>
+          <div class="track-title">UDESSIA</div>
+          <div class="track-platform">SOUNDCLOUD</div>
+          <div class="track-arrow arrow-text">↗︎</div>
+        </a>
+
+
+        <a
+          class="track"
+          href="https://open.spotify.com/intl-fr/track/2CYDN3BdzhKFLJEn47KGAo?si=25eb095d53c045dd"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="track-number">02</div>
+          <div class="track-title">E-NOUGH</div>
+          <div class="track-platform">SPOTIFY</div>
+          <div class="track-arrow arrow-text">↗︎</div>
+        </a>
+
+
+        <a
+          class="track"
+          href="https://open.spotify.com/intl-fr/track/5GMh7gioko5ZeMpFGPj8LC?si=eeb8abee64e446eb"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="track-number">03</div>
+          <div class="track-title">ES FACIL</div>
+          <div class="track-platform">SPOTIFY</div>
+          <div class="track-arrow arrow-text">↗︎</div>
+        </a>
+
+
+        <a
+          class="track"
+          href="https://open.spotify.com/intl-fr/track/0eKaj2S6ApGsW7QuAsXvFF?si=0c3a980ae1e24dc5"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="track-number">04</div>
+          <div class="track-title">HIGH VOLTAGES</div>
+          <div class="track-platform">SPOTIFY</div>
+          <div class="track-arrow arrow-text">↗︎</div>
+        </a>
+
+
+        <a
+          class="track"
+          href="https://open.spotify.com/intl-fr/track/0CNeoxIgv9hjBTZuR8TsYO?si=a04f5b55166742b8"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="track-number">05</div>
+          <div class="track-title">SUNRISE LOVERS</div>
+          <div class="track-platform">SPOTIFY</div>
+          <div class="track-arrow arrow-text">↗︎</div>
+        </a>
+
+
+        <a
+          class="track"
+          href="https://open.spotify.com/intl-fr/track/4DYNnLSjafhJrpN18PKPs2?si=be215edb93c7441a"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="track-number">06</div>
+          <div class="track-title">KINKY PARTY</div>
+          <div class="track-platform">SPOTIFY</div>
+          <div class="track-arrow arrow-text">↗︎</div>
+        </a>
+
+
+        <a
+          class="track"
+          href="https://open.spotify.com/intl-fr/track/0EsTapKVndzDqYhDXyPYoA?si=9584e2ce0d3340e1"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="track-number">07</div>
+          <div class="track-title">
+            QUAND TU ME FAIS DE LA PEINE
+          </div>
+          <div class="track-platform">SPOTIFY</div>
+          <div class="track-arrow arrow-text">↗︎</div>
+        </a>
+
+
+        <a
+          class="track"
+          href="https://open.spotify.com/intl-fr/track/5lvkK4pEqDv1petOLUmaMe?si=cecf64be0cbb41da"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="track-number">08</div>
+          <div class="track-title">INK DONE</div>
+          <div class="track-platform">SPOTIFY</div>
+          <div class="track-arrow arrow-text">↗︎</div>
         </a>
 
 
       </div>
 
-
     </div>
 
-
   </section>
-
 
 
   <!-- LIVE -->
 
   <section id="live">
 
-
     <div class="section-number">
-      02 — LIVE ARCHIVE
+      02 — LIVE
     </div>
-
 
     <h2 class="section-title">
       LIVE
     </h2>
-
 
     <div class="live-intro">
       INTERNATIONAL & SELECTED FRANCE · 2021—2026
@@ -1502,331 +1071,227 @@
 
     <div class="live-layout">
 
-
       <div class="shows">
 
 
         <div class="show">
           <div class="show-date">07.08.26</div>
-          <div><div class="show-venue">NOUS FESTIVAL</div></div>
+          <div class="show-venue">NOUS FESTIVAL</div>
           <div class="show-location">BELLOCQ · FR</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">11.09.25</div>
-          <div><div class="show-venue">MOSPHERA · MALAGA SIN CITY</div></div>
+          <div class="show-venue">MOSPHERA · MALAGA SIN CITY</div>
           <div class="show-location">MILAN · IT</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">14.08.25</div>
-          <div><div class="show-venue">LA TERRRAZZA</div></div>
+          <div class="show-venue">LA TERRRAZZA</div>
           <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">31.05.25</div>
-          <div><div class="show-venue">CARPE DIEM EXPERIENCE</div></div>
+          <div class="show-venue">CARPE DIEM EXPERIENCE</div>
           <div class="show-location">MOST · CZ</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">02.05.25</div>
-          <div><div class="show-venue">CULTURE BOX</div></div>
+          <div class="show-venue">CULTURE BOX</div>
           <div class="show-location">COPENHAGEN · DK</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            12.02.25
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              OTHERSIDE #009
-            </div>
-
+          <div class="show-date">12.02.25</div>
+          <div class="show-venue">
+            OTHERSIDE #009
             <div class="show-detail">
               MOONKIZA B2B CHRIS GAVIN
             </div>
-
           </div>
-
-          <div class="show-location">
-            BARCELONA · ES
-          </div>
-
+          <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">08.02.25</div>
-          <div><div class="show-venue">BONNEFOOI</div></div>
+          <div class="show-venue">BONNEFOOI</div>
           <div class="show-location">BRUSSELS · BE</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">26.10.24</div>
-          <div><div class="show-venue">SHEA · FREEDONIA</div></div>
+          <div class="show-venue">SHEA · FREEDONIA</div>
           <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">08.06.24</div>
-          <div><div class="show-venue">DISCO BIZARRE · KITKATCLUB</div></div>
+          <div class="show-venue">DISCO BIZARRE · KITKATCLUB</div>
           <div class="show-location">BERLIN · DE</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">07.06.24</div>
-          <div><div class="show-venue">WURZELFESTIVAL</div></div>
+          <div class="show-venue">WURZELFESTIVAL</div>
           <div class="show-location">GERMANY · DE</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">17.02.24</div>
-          <div><div class="show-venue">SHEA · FREEDONIA</div></div>
+          <div class="show-venue">SHEA · FREEDONIA</div>
           <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">31.12.23</div>
-          <div><div class="show-venue">CULTURE BOX · NYE</div></div>
+          <div class="show-venue">CULTURE BOX · NYE</div>
           <div class="show-location">COPENHAGEN · DK</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">26.03.23</div>
-          <div><div class="show-venue">AFTER O'CLOCK · GLAZART</div></div>
+          <div class="show-venue">AFTER O'CLOCK · GLAZART</div>
           <div class="show-location">PARIS · FR</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">30.09.22</div>
-          <div><div class="show-venue">BLT · SILENCIO</div></div>
+          <div class="show-venue">BLT · SILENCIO</div>
           <div class="show-location">PARIS · FR</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            24.09.22
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              UTOPIA FESTIVAL
-            </div>
-
+          <div class="show-date">24.09.22</div>
+          <div class="show-venue">
+            UTOPIA FESTIVAL
             <div class="show-detail">
               CHRIS GAVIN B2B REMAIN
             </div>
-
           </div>
-
-          <div class="show-location">
-            MARSEILLE · FR
-          </div>
-
+          <div class="show-location">MARSEILLE · FR</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            31.07.22
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              FAMILY PIKNIK · OPENING
-            </div>
-
+          <div class="show-date">31.07.22</div>
+          <div class="show-venue">
+            FAMILY PIKNIK · OPENING
             <div class="show-detail">
               GABRIEL I B2B CHRIS GAVIN
             </div>
-
           </div>
-
-          <div class="show-location">
-            LUNEL · FR
-          </div>
-
+          <div class="show-location">LUNEL · FR</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">12.06.22</div>
-          <div><div class="show-venue">AFTER O'CLOCK SUMMER CAMP · GLAZART</div></div>
+          <div class="show-venue">AFTER O'CLOCK SUMMER CAMP · GLAZART</div>
           <div class="show-location">PARIS · FR</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            17.09.21
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              R2 ROOFTOP · TUNNEL OF LOVE
-            </div>
-
+          <div class="show-date">17.09.21</div>
+          <div class="show-venue">
+            R2 ROOFTOP · TUNNEL OF LOVE
             <div class="show-detail">
               WITH PEGGY GOU · DID VIRGO
             </div>
-
           </div>
-
-          <div class="show-location">
-            MARSEILLE · FR
-          </div>
-
+          <div class="show-location">MARSEILLE · FR</div>
         </div>
 
 
       </div>
-
 
 
       <div class="live-visual">
 
-
         <div class="live-image">
-
-
           <img
             src="Chris-Gavin_Live-CarpeDiem-2025_KarelRichtr_01.jpg"
-            alt="Chris Gavin live at Carpe Diem Experience 2025"
+            alt="Chris Gavin live at Carpe Diem Experience"
           >
-
-
         </div>
-
 
         <div class="live-caption">
-
-
-          <span>
-            LIVE
-          </span>
-
-
-          <span>
-            CARPE DIEM · 2025
-          </span>
-
-
+          <span>CARPE DIEM EXPERIENCE</span>
+          <span>2025</span>
         </div>
-
 
       </div>
 
-
     </div>
 
-
   </section>
-
 
 
   <!-- ABOUT -->
 
   <section id="about">
 
-
     <div class="section-number">
       03 — ABOUT
     </div>
 
-
     <h2 class="section-title">
-      CHRIS GAVIN
+      ABOUT
     </h2>
 
 
     <div class="about-layout">
 
-
       <div class="about-copy">
 
-
         <p class="about-lead">
-
-          Marseille-based DJ and producer Chris Gavin moves between
-          house, progressive electronics, melodic techno and indie dance.
-
+          Marseille-based DJ and producer Chris Gavin moves between house,
+          progressive electronics, melodic techno and indie dance.
           <span class="soft">
-
             Artistic director of Danceteria, his work connects years of
             production and club culture with an increasingly international
             DJ schedule.
-
           </span>
-
         </p>
 
 
         <div class="about-meta">
 
-
           <div class="about-row">
-
-            <div class="about-key">
-              BASED
-            </div>
-
-            <div class="about-value">
-              MARSEILLE · FRANCE
-            </div>
-
+            <div class="about-key">BASED</div>
+            <div class="about-value">MARSEILLE · FRANCE</div>
           </div>
 
-
           <div class="about-row">
-
-            <div class="about-key">
-              ROLE
-            </div>
-
+            <div class="about-key">ROLE</div>
             <div class="about-value">
               DJ · PRODUCER · ARTISTIC DIRECTOR
             </div>
-
           </div>
 
-
           <div class="about-row">
-
-            <div class="about-key">
-              CLUB
-            </div>
-
+            <div class="about-key">CLUB</div>
             <div class="about-value">
               DANCETERIA · MARSEILLE
             </div>
-
           </div>
-
 
         </div>
 
@@ -1835,121 +1300,64 @@
           class="epk-link"
           href="epk.html"
         >
-
-          <span>
-            EPK / PRESS
-          </span>
-
-          <span
-            class="arrow-text"
-            aria-hidden="true"
-          >
-            ↗︎
-          </span>
-
+          <span>EPK / PRESS</span>
+          <span class="arrow-text">↗︎</span>
         </a>
 
-
       </div>
-
 
 
       <div>
 
-
         <div class="about-photo">
-
-
           <img
             src="Chris gavin 2023.jpg"
-            alt="Chris Gavin portrait"
+            alt="Chris Gavin"
           >
-
-
         </div>
-
 
         <div class="about-photo-caption">
-
-
-          <span>
-            CHRIS GAVIN
-          </span>
-
-
-          <span>
-            MARSEILLE
-          </span>
-
-
+          <span>CHRIS GAVIN</span>
+          <span>MARSEILLE</span>
         </div>
-
 
       </div>
 
-
     </div>
-
 
   </section>
 
 
-
   <!-- CONTACT -->
 
-  <section
-    id="contact"
-    class="contact"
-  >
-
+  <section id="contact" class="contact">
 
     <div>
-
 
       <div class="section-number">
         04 — CONTACT
       </div>
 
-
       <h2 class="section-title">
-
-        LET'S<br>
-        TALK.
-
+        LET'S TALK.
       </h2>
-
 
       <a
         class="booking-email"
         href="mailto:booking@djchrisgavin.com"
       >
-
         booking@djchrisgavin.com
-
       </a>
 
 
       <div class="contact-links">
 
-
         <a
           class="contact-link"
           href="mailto:booking@djchrisgavin.com"
         >
-
-          <span>
-            BOOKING
-          </span>
-
-          <span
-            class="arrow-text"
-            aria-hidden="true"
-          >
-            ↗︎
-          </span>
-
+          BOOKING <span class="arrow-text">↗︎</span>
         </a>
-
 
         <a
           class="contact-link"
@@ -1957,20 +1365,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-
-          <span>
-            INSTAGRAM
-          </span>
-
-          <span
-            class="arrow-text"
-            aria-hidden="true"
-          >
-            ↗︎
-          </span>
-
+          INSTAGRAM <span class="arrow-text">↗︎</span>
         </a>
-
 
         <a
           class="contact-link"
@@ -1978,20 +1374,8 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-
-          <span>
-            SPOTIFY
-          </span>
-
-          <span
-            class="arrow-text"
-            aria-hidden="true"
-          >
-            ↗︎
-          </span>
-
+          SPOTIFY <span class="arrow-text">↗︎</span>
         </a>
-
 
         <a
           class="contact-link"
@@ -1999,50 +1383,22 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-
-          <span>
-            SOUNDCLOUD
-          </span>
-
-          <span
-            class="arrow-text"
-            aria-hidden="true"
-          >
-            ↗︎
-          </span>
-
+          SOUNDCLOUD <span class="arrow-text">↗︎</span>
         </a>
 
-
       </div>
-
 
     </div>
 
 
-
     <footer>
-
-
-      <div>
-        © 2026 CHRIS GAVIN
-      </div>
-
-
-      <div>
-        MARSEILLE — FRANCE
-      </div>
-
-
+      <span>CHRIS GAVIN © 2026</span>
+      <span>MARSEILLE · FRANCE</span>
     </footer>
-
 
   </section>
 
-
 </main>
 
-
 </body>
-
 </html>
