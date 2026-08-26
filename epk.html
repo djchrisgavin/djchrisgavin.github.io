@@ -1,1 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Chris Gavin — EPK / Press
+  </title>
+
+  <meta
+    name="description"
+    content="Chris Gavin electronic press kits and booking information."
+  >
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+
+      min-height: 100vh;
+
+      background: #090909;
+
+      color: #f1f0eb;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+    }
+
+    a {
+      color: inherit;
+
+      text-decoration: none;
+    }
+
+
+    /* HEADER */
+
+    header {
+      width: 100%;
+
+      padding: 28px 40px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 14px;
+
+      letter-spacing: 0.08em;
+    }
+
+    .back {
+      font-size: 10px;
+
+      letter-spacing: 0.18em;
+
+      opacity: 0.45;
+
+      transition: opacity 0.25s ease;
+    }
+
+    .back:hover {
+      opacity: 1;
+    }
+
+
+    /* MAIN */
+
+    main {
+      min-height: calc(100vh - 75px);
+
+      padding:
+        90px
+        40px
+        40px;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+    }
+
+
+    .eyebrow {
+      font-size: 9px;
+
+      letter-spacing: 0.23em;
+
+      opacity: 0.38;
+
+      margin-bottom: 45px;
+    }
+
+
+    h1 {
+      margin: 0;
+
+      font-size:
+        clamp(
+          70px,
+          10vw,
+          160px
+        );
+
+      font-weight: 400;
+
+      letter-spacing: -0.07em;
+
+      line-height: 0.8;
+    }
+
+
+    .intro {
+      max-width: 670px;
+
+      margin-top: 60px;
+
+      font-size:
+        clamp(
+          18px,
+          2vw,
+          28px
+        );
+
+      line-height: 1.25;
+
+      letter-spacing: -0.025em;
+
+      opacity: 0.5;
+    }
+
+
+    /* EPK LIST */
+
+    .epk-list {
+      margin-top: 110px;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.16);
+    }
+
+
+    .epk-item {
+      position: relative;
+
+      display: grid;
+
+      grid-template-columns:
+        60px
+        1fr
+        auto;
+
+      gap: 30px;
+
+      align-items: center;
+
+      padding: 34px 0;
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,0.16);
+
+      transition:
+        opacity 0.25s ease;
+    }
+
+
+    .epk-item:hover {
+      opacity: 0.55;
+    }
+
+
+    .epk-index {
+      font-size: 9px;
+
+      letter-spacing: 0.15em;
+
+      opacity: 0.28;
+    }
+
+
+    .epk-title {
+      font-size:
+        clamp(
+          26px,
+          4vw,
+          58px
+        );
+
+      letter-spacing: -0.045em;
+
+      line-height: 1;
+    }
+
+
+    .epk-description {
+      margin-top: 10px;
+
+      font-size: 9px;
+
+      letter-spacing: 0.16em;
+
+      opacity: 0.32;
+    }
+
+
+    .epk-arrow {
+      font-size: 18px;
+
+      opacity: 0.5;
+    }
+
+
+    /* RED DETAIL */
+
+    .red-dot {
+      width: 7px;
+
+      height: 7px;
+
+      margin-top: 60px;
+
+      border-radius: 50%;
+
+      background: #a42018;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      margin-top: 100px;
+
+      padding-top: 30px;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      border-top:
+        1px solid
+        rgba(255,255,255,0.12);
+
+      font-size: 9px;
+
+      letter-spacing: 0.15em;
+
+      opacity: 0.28;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 22px 20px;
+      }
+
+      main {
+        padding:
+          80px
+          20px
+          30px;
+      }
+
+      h1 {
+        font-size: 21vw;
+
+        line-height: 0.82;
+      }
+
+      .intro {
+        margin-top: 45px;
+
+        font-size: 18px;
+      }
+
+      .epk-list {
+        margin-top: 80px;
+      }
+
+      .epk-item {
+        grid-template-columns:
+          35px
+          1fr
+          auto;
+
+        gap: 14px;
+
+        padding: 28px 0;
+      }
+
+      .epk-title {
+        font-size: 8vw;
+      }
+
+      footer {
+        flex-direction: column;
+
+        gap: 12px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+  <a
+    class="logo"
+    href="index.html"
+  >
+    CG
+  </a>
+
+  <a
+    class="back"
+    href="index.html"
+  >
+    ← BACK
+  </a>
+
+</header>
+
+
+<main>
+
+
+  <div>
+
+
+    <div class="eyebrow">
+      PRESS · BOOKING · 2026
+    </div>
+
+
+    <h1>
+      EPK /<br>
+      PRESS
+    </h1>
+
+
+    <div class="intro">
+
+      Select the artistic direction
+      most relevant to your venue,
+      festival or programming.
+
+    </div>
+
+
+    <div class="red-dot"></div>
+
+
+    <div class="epk-list">
+
+
+      <!-- HOUSE / PROGRESSIVE -->
+
+      <a
+        class="epk-item"
+        href="Chris_Gavin_EPK_EN_2026.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="epk-index">
+          01
+        </div>
+
+
+        <div>
+
+          <div class="epk-title">
+            HOUSE / PROGRESSIVE
+          </div>
+
+          <div class="epk-description">
+            HOUSE · PROGRESSIVE HOUSE · MELODIC ELECTRONICS
+          </div>
+
+        </div>
+
+
+        <div class="epk-arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+
+      <!-- INDIE / DARK -->
+
+      <a
+        class="epk-item"
+        href="Chris_Gavin_EPK_2026_Indie_Dark_SlowTechno_EN.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+
+        <div class="epk-index">
+          02
+        </div>
+
+
+        <div>
+
+          <div class="epk-title">
+            INDIE / DARK
+          </div>
+
+          <div class="epk-description">
+            INDIE DANCE · DARK DISCO · SLOW TECHNO
+          </div>
+
+        </div>
+
+
+        <div class="epk-arrow">
+          ↗
+        </div>
+
+      </a>
+
+
+    </div>
+
+
+  </div>
+
+
+  <footer>
+
+    <span>
+      © 2026 CHRIS GAVIN
+    </span>
+
+    <span>
+      BOOKING@DJCHRISGAVIN.COM
+    </span>
+
+  </footer>
+
+
+</main>
+
+
+</body>
+
+</html>
