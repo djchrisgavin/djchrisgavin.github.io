@@ -41,9 +41,7 @@
     }
 
 
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       position: fixed;
@@ -69,7 +67,6 @@
     nav {
       display: flex;
       gap: 30px;
-
       font-size: 11px;
       letter-spacing: 0.14em;
     }
@@ -84,9 +81,7 @@
     }
 
 
-    /* =========================
-       HERO
-    ========================= */
+    /* HERO */
 
     .hero {
       min-height: 100vh;
@@ -116,89 +111,63 @@
     .hero-content {
       position: relative;
       z-index: 2;
-
       width: 100%;
       padding-bottom: 85px;
     }
 
     h1 {
       margin: 0;
-
       font-size: clamp(64px, 10.3vw, 165px);
-
       font-weight: 400;
-
       letter-spacing: -0.075em;
-
       line-height: 0.82;
-
       max-width: 95%;
     }
 
     .subtitle {
       margin-top: 30px;
-
       font-size: 11px;
-
       letter-spacing: 0.26em;
-
       opacity: 0.92;
     }
 
     .scroll {
       position: absolute;
-
       bottom: 28px;
       right: 40px;
-
       font-size: 8px;
-
       letter-spacing: 0.24em;
-
       opacity: 0.3;
     }
 
 
-    /* =========================
-       GLOBAL
-    ========================= */
+    /* GLOBAL */
 
     section {
       padding: 135px 40px;
-
       border-top: 1px solid rgba(255,255,255,0.12);
     }
 
     .section-number {
       margin-bottom: 55px;
-
       font-size: 10px;
-
       letter-spacing: 0.2em;
-
       opacity: 0.42;
     }
 
     .section-title {
       margin: 0;
-
       font-size: clamp(48px, 7vw, 110px);
-
       font-weight: 400;
-
       letter-spacing: -0.055em;
-
       line-height: 0.95;
     }
 
 
-    /* =========================
-       MUSIC
-    ========================= */
+    /* MUSIC */
 
     .music-release {
       max-width: 1250px;
-
       margin-top: 90px;
 
       display: grid;
@@ -215,9 +184,7 @@
     .cover-wrap {
       width: 100%;
       max-width: 460px;
-
       overflow: hidden;
-
       background: #111;
     }
 
@@ -234,22 +201,18 @@
 
     .release-meta {
       max-width: 520px;
-
       padding-top: 95px;
     }
 
     .release-label {
       display: flex;
       align-items: center;
-
       gap: 12px;
 
       margin-bottom: 36px;
 
       font-size: 9px;
-
       letter-spacing: 0.24em;
-
       opacity: 0.55;
     }
 
@@ -330,9 +293,7 @@
     }
 
 
-    /* =========================
-       LIVE
-    ========================= */
+    /* LIVE */
 
     .live-intro {
       margin-top: 20px;
@@ -474,9 +435,7 @@
     }
 
 
-    /* =========================
-       ABOUT
-    ========================= */
+    /* ABOUT */
 
     .about-layout {
       max-width: 1450px;
@@ -620,9 +579,7 @@
     }
 
 
-    /* =========================
-       CONTACT
-    ========================= */
+    /* CONTACT */
 
     .contact {
       min-height: 80vh;
@@ -642,10 +599,40 @@
       gap: 35px;
 
       flex-wrap: wrap;
+    }
+
+    .contact-link {
+      padding: 14px 0;
 
       font-size: 11px;
 
       letter-spacing: 0.18em;
+
+      border-bottom: 1px solid rgba(255,255,255,0.25);
+
+      transition:
+        opacity 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .contact-link:hover {
+      opacity: 0.55;
+
+      border-color: rgba(255,255,255,0.6);
+    }
+
+    .booking-email {
+      margin-top: 45px;
+
+      font-size: clamp(18px, 2vw, 28px);
+
+      letter-spacing: -0.02em;
+
+      opacity: 0.55;
+    }
+
+    .booking-email:hover {
+      opacity: 1;
     }
 
     footer {
@@ -661,9 +648,7 @@
     }
 
 
-    /* =========================
-       TABLET
-    ========================= */
+    /* TABLET */
 
     @media (max-width: 1050px) {
 
@@ -710,9 +695,7 @@
     }
 
 
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 700px) {
 
@@ -878,7 +861,30 @@
       }
 
 
-      /* FOOTER MOBILE */
+      /* CONTACT MOBILE */
+
+      .contact-links {
+        flex-direction: column;
+
+        gap: 10px;
+
+        margin-top: 70px;
+      }
+
+      .contact-link {
+        width: 100%;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        padding: 18px 0;
+      }
+
+      .booking-email {
+        font-size: 17px;
+      }
+
 
       footer {
         gap: 20px;
@@ -928,9 +934,7 @@
 <main id="top">
 
 
-  <!-- =========================
-       HERO
-  ========================== -->
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -954,9 +958,7 @@
 
 
 
-  <!-- =========================
-       MUSIC
-  ========================== -->
+  <!-- MUSIC -->
 
   <section id="music">
 
@@ -1039,9 +1041,7 @@
 
 
 
-  <!-- =========================
-       LIVE
-  ========================== -->
+  <!-- LIVE -->
 
   <section id="live">
 
@@ -1066,255 +1066,139 @@
 
         <div class="show">
           <div class="show-date">07.08.26</div>
-          <div>
-            <div class="show-venue">
-              NOUS FESTIVAL
-            </div>
-          </div>
-          <div class="show-location">
-            BELLOCQ · FR
-          </div>
+          <div><div class="show-venue">NOUS FESTIVAL</div></div>
+          <div class="show-location">BELLOCQ · FR</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">11.09.25</div>
-          <div>
-            <div class="show-venue">
-              MOSPHERA · MALAGA SIN CITY
-            </div>
-          </div>
-          <div class="show-location">
-            MILAN · IT
-          </div>
+          <div><div class="show-venue">MOSPHERA · MALAGA SIN CITY</div></div>
+          <div class="show-location">MILAN · IT</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">14.08.25</div>
-          <div>
-            <div class="show-venue">
-              LA TERRRAZZA
-            </div>
-          </div>
-          <div class="show-location">
-            BARCELONA · ES
-          </div>
+          <div><div class="show-venue">LA TERRRAZZA</div></div>
+          <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">31.05.25</div>
-          <div>
-            <div class="show-venue">
-              CARPE DIEM EXPERIENCE
-            </div>
-          </div>
-          <div class="show-location">
-            MOST · CZ
-          </div>
+          <div><div class="show-venue">CARPE DIEM EXPERIENCE</div></div>
+          <div class="show-location">MOST · CZ</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">02.05.25</div>
-          <div>
-            <div class="show-venue">
-              CULTURE BOX
-            </div>
-          </div>
-          <div class="show-location">
-            COPENHAGEN · DK
-          </div>
+          <div><div class="show-venue">CULTURE BOX</div></div>
+          <div class="show-location">COPENHAGEN · DK</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">12.02.25</div>
           <div>
-            <div class="show-venue">
-              OTHERSIDE #009
-            </div>
-
-            <div class="show-detail">
-              MOONKIZA B2B CHRIS GAVIN
-            </div>
+            <div class="show-venue">OTHERSIDE #009</div>
+            <div class="show-detail">MOONKIZA B2B CHRIS GAVIN</div>
           </div>
-
-          <div class="show-location">
-            BARCELONA · ES
-          </div>
+          <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">08.02.25</div>
-          <div>
-            <div class="show-venue">
-              BONNEFOOI
-            </div>
-          </div>
-          <div class="show-location">
-            BRUSSELS · BE
-          </div>
+          <div><div class="show-venue">BONNEFOOI</div></div>
+          <div class="show-location">BRUSSELS · BE</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">26.10.24</div>
-          <div>
-            <div class="show-venue">
-              SHEA · FREEDONIA
-            </div>
-          </div>
-          <div class="show-location">
-            BARCELONA · ES
-          </div>
+          <div><div class="show-venue">SHEA · FREEDONIA</div></div>
+          <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">08.06.24</div>
-          <div>
-            <div class="show-venue">
-              DISCO BIZARRE · KITKATCLUB
-            </div>
-          </div>
-          <div class="show-location">
-            BERLIN · DE
-          </div>
+          <div><div class="show-venue">DISCO BIZARRE · KITKATCLUB</div></div>
+          <div class="show-location">BERLIN · DE</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">07.06.24</div>
-          <div>
-            <div class="show-venue">
-              WURZELFESTIVAL
-            </div>
-          </div>
-          <div class="show-location">
-            GERMANY · DE
-          </div>
+          <div><div class="show-venue">WURZELFESTIVAL</div></div>
+          <div class="show-location">GERMANY · DE</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">17.02.24</div>
-          <div>
-            <div class="show-venue">
-              SHEA · FREEDONIA
-            </div>
-          </div>
-          <div class="show-location">
-            BARCELONA · ES
-          </div>
+          <div><div class="show-venue">SHEA · FREEDONIA</div></div>
+          <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">31.12.23</div>
-          <div>
-            <div class="show-venue">
-              CULTURE BOX · NYE
-            </div>
-          </div>
-          <div class="show-location">
-            COPENHAGEN · DK
-          </div>
+          <div><div class="show-venue">CULTURE BOX · NYE</div></div>
+          <div class="show-location">COPENHAGEN · DK</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">26.03.23</div>
-          <div>
-            <div class="show-venue">
-              AFTER O'CLOCK · GLAZART
-            </div>
-          </div>
-          <div class="show-location">
-            PARIS · FR
-          </div>
+          <div><div class="show-venue">AFTER O'CLOCK · GLAZART</div></div>
+          <div class="show-location">PARIS · FR</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">30.09.22</div>
-          <div>
-            <div class="show-venue">
-              BLT · SILENCIO
-            </div>
-          </div>
-          <div class="show-location">
-            PARIS · FR
-          </div>
+          <div><div class="show-venue">BLT · SILENCIO</div></div>
+          <div class="show-location">PARIS · FR</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">24.09.22</div>
           <div>
-            <div class="show-venue">
-              UTOPIA FESTIVAL
-            </div>
-
-            <div class="show-detail">
-              CHRIS GAVIN B2B REMAIN
-            </div>
+            <div class="show-venue">UTOPIA FESTIVAL</div>
+            <div class="show-detail">CHRIS GAVIN B2B REMAIN</div>
           </div>
-
-          <div class="show-location">
-            MARSEILLE · FR
-          </div>
+          <div class="show-location">MARSEILLE · FR</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">31.07.22</div>
           <div>
-            <div class="show-venue">
-              FAMILY PIKNIK · OPENING
-            </div>
-
-            <div class="show-detail">
-              GABRIEL I B2B CHRIS GAVIN
-            </div>
+            <div class="show-venue">FAMILY PIKNIK · OPENING</div>
+            <div class="show-detail">GABRIEL I B2B CHRIS GAVIN</div>
           </div>
-
-          <div class="show-location">
-            LUNEL · FR
-          </div>
+          <div class="show-location">LUNEL · FR</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">12.06.22</div>
-          <div>
-            <div class="show-venue">
-              AFTER O'CLOCK SUMMER CAMP · GLAZART
-            </div>
-          </div>
-          <div class="show-location">
-            PARIS · FR
-          </div>
+          <div><div class="show-venue">AFTER O'CLOCK SUMMER CAMP · GLAZART</div></div>
+          <div class="show-location">PARIS · FR</div>
         </div>
 
 
         <div class="show">
           <div class="show-date">17.09.21</div>
           <div>
-            <div class="show-venue">
-              R2 ROOFTOP · TUNNEL OF LOVE
-            </div>
-
-            <div class="show-detail">
-              WITH PEGGY GOU · DID VIRGO
-            </div>
+            <div class="show-venue">R2 ROOFTOP · TUNNEL OF LOVE</div>
+            <div class="show-detail">WITH PEGGY GOU · DID VIRGO</div>
           </div>
-
-          <div class="show-location">
-            MARSEILLE · FR
-          </div>
+          <div class="show-location">MARSEILLE · FR</div>
         </div>
 
 
@@ -1356,9 +1240,7 @@
 
 
 
-  <!-- =========================
-       ABOUT
-  ========================== -->
+  <!-- ABOUT -->
 
   <section id="about">
 
@@ -1492,9 +1374,7 @@
 
 
 
-  <!-- =========================
-       CONTACT
-  ========================== -->
+  <!-- CONTACT -->
 
   <section
     id="contact"
@@ -1516,27 +1396,51 @@
       </h2>
 
 
+      <a
+        class="booking-email"
+        href="mailto:booking@djchrisgavin.com"
+      >
+        booking@djchrisgavin.com
+      </a>
+
+
       <div class="contact-links">
 
-        <a href="#">
-          BOOKING
+
+        <a
+          class="contact-link"
+          href="mailto:booking@djchrisgavin.com"
+        >
+          BOOKING ↗
         </a>
 
 
         <a
+          class="contact-link"
           href="https://www.instagram.com/djchrisgavin/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           INSTAGRAM ↗
         </a>
 
 
-        <a href="#">
+        <a
+          class="contact-link"
+          href="https://open.spotify.com/artist/0cxpVsCbSCmNmcxor8VX6I"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           SPOTIFY ↗
         </a>
 
 
-        <a href="#">
+        <a
+          class="contact-link"
+          href="https://soundcloud.com/djchrisgavin"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           SOUNDCLOUD ↗
         </a>
 
