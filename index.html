@@ -2,15 +2,107 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Chris Gavin — DJ & Producer</title>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Chris Gavin — DJ, Producer & Artistic Director
+  </title>
 
   <meta
     name="description"
-    content="Official website of Chris Gavin — DJ and electronic music producer based in Marseille."
+    content="Official website of Chris Gavin, Marseille-based DJ, producer and artistic director of Danceteria. House, progressive electronics, melodic techno and indie dance."
   >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="author"
+    content="Chris Gavin"
+  >
+
+  <meta
+    name="theme-color"
+    content="#090909"
+  >
+
+
+  <!-- CANONICAL -->
+
+  <link
+    rel="canonical"
+    href="https://djchrisgavin.com/"
+  >
+
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Chris Gavin — DJ, Producer & Artistic Director"
+  >
+
+  <meta
+    property="og:description"
+    content="Marseille-based DJ, producer and artistic director. House, progressive electronics, melodic techno and indie dance."
+  >
+
+  <meta
+    property="og:url"
+    content="https://djchrisgavin.com/"
+  >
+
+  <meta
+    property="og:image"
+    content="https://djchrisgavin.com/chris-gavin-hero.jpeg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Chris Gavin performing live"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Chris Gavin"
+  >
+
+
+  <!-- TWITTER / SOCIAL PREVIEW -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Chris Gavin — DJ, Producer & Artistic Director"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Marseille-based DJ, producer and artistic director."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://djchrisgavin.com/chris-gavin-hero.jpeg"
+  >
+
 
   <style>
 
@@ -24,34 +116,50 @@
 
     body {
       margin: 0;
+
       background: #090909;
+
       color: #f1f0eb;
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       font-weight: 400;
     }
 
     a {
       color: inherit;
+
       text-decoration: none;
     }
 
     img {
       display: block;
+
       width: 100%;
     }
 
 
-    /* HEADER */
+    /* =========================================================
+       HEADER
+    ========================================================= */
 
     header {
       position: fixed;
+
       top: 0;
       left: 0;
+
       width: 100%;
+
       padding: 28px 40px;
 
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
 
       z-index: 100;
@@ -61,19 +169,23 @@
 
     .logo {
       font-size: 14px;
+
       letter-spacing: 0.08em;
     }
 
     nav {
       display: flex;
+
       gap: 30px;
 
       font-size: 11px;
+
       letter-spacing: 0.14em;
     }
 
     nav a {
       opacity: 0.7;
+
       transition: opacity 0.25s ease;
     }
 
@@ -82,52 +194,75 @@
     }
 
 
-    /* HERO */
+    /* =========================================================
+       HERO
+    ========================================================= */
 
     .hero {
       min-height: 100vh;
+
       position: relative;
 
       display: flex;
+
       align-items: flex-end;
 
       overflow: hidden;
+
       padding: 40px;
 
       background-image:
+
         linear-gradient(
+
           to bottom,
+
           rgba(0,0,0,0.08) 0%,
+
           rgba(0,0,0,0.03) 40%,
+
           rgba(0,0,0,0.25) 68%,
+
           rgba(0,0,0,0.82) 100%
+
         ),
+
         url("chris-gavin-hero.jpeg");
 
       background-size: cover;
+
       background-position: center center;
+
       background-repeat: no-repeat;
     }
 
     .hero-content {
       position: relative;
+
       z-index: 2;
+
       width: 100%;
+
       padding-bottom: 85px;
     }
 
     h1 {
       margin: 0;
 
-      font-size: clamp(64px, 10.3vw, 165px);
+      max-width: 95%;
+
+      font-size:
+        clamp(
+          64px,
+          10.3vw,
+          165px
+        );
 
       font-weight: 400;
 
       letter-spacing: -0.075em;
 
       line-height: 0.82;
-
-      max-width: 95%;
     }
 
     .subtitle {
@@ -135,7 +270,7 @@
 
       font-size: 11px;
 
-      letter-spacing: 0.26em;
+      letter-spacing: 0.23em;
 
       opacity: 0.92;
     }
@@ -154,12 +289,16 @@
     }
 
 
-    /* GLOBAL */
+    /* =========================================================
+       GLOBAL SECTIONS
+    ========================================================= */
 
     section {
       padding: 135px 40px;
 
-      border-top: 1px solid rgba(255,255,255,0.12);
+      border-top:
+        1px solid
+        rgba(255,255,255,0.12);
     }
 
     .section-number {
@@ -175,7 +314,12 @@
     .section-title {
       margin: 0;
 
-      font-size: clamp(48px, 7vw, 110px);
+      font-size:
+        clamp(
+          48px,
+          7vw,
+          110px
+        );
 
       font-weight: 400;
 
@@ -185,7 +329,9 @@
     }
 
 
-    /* MUSIC */
+    /* =========================================================
+       MUSIC
+    ========================================================= */
 
     .music-release {
       max-width: 1250px;
@@ -198,13 +344,19 @@
         minmax(280px, 460px)
         minmax(320px, 520px);
 
-      gap: clamp(70px, 9vw, 150px);
+      gap:
+        clamp(
+          70px,
+          9vw,
+          150px
+        );
 
       align-items: start;
     }
 
     .cover-wrap {
       width: 100%;
+
       max-width: 460px;
 
       overflow: hidden;
@@ -214,9 +366,13 @@
 
     .cover-wrap img {
       width: 100%;
+
       height: auto;
 
-      transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+      transition:
+        transform
+        0.8s
+        cubic-bezier(.2,.7,.2,1);
     }
 
     .cover-wrap:hover img {
@@ -231,6 +387,7 @@
 
     .release-label {
       display: flex;
+
       align-items: center;
 
       gap: 12px;
@@ -246,6 +403,7 @@
 
     .release-dot {
       width: 6px;
+
       height: 6px;
 
       border-radius: 50%;
@@ -256,7 +414,12 @@
     .release-meta h3 {
       margin: 0;
 
-      font-size: clamp(52px, 6vw, 92px);
+      font-size:
+        clamp(
+          52px,
+          6vw,
+          92px
+        );
 
       font-weight: 400;
 
@@ -303,11 +466,18 @@
       padding: 17px 0;
 
       display: flex;
+
       justify-content: space-between;
+
       align-items: center;
 
-      border-top: 1px solid rgba(255,255,255,.35);
-      border-bottom: 1px solid rgba(255,255,255,.35);
+      border-top:
+        1px solid
+        rgba(255,255,255,.35);
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,.35);
 
       font-size: 10px;
 
@@ -321,7 +491,9 @@
     }
 
 
-    /* LIVE */
+    /* =========================================================
+       LIVE
+    ========================================================= */
 
     .live-intro {
       margin-top: 20px;
@@ -344,13 +516,20 @@
         minmax(550px, 1.25fr)
         minmax(300px, 0.75fr);
 
-      gap: clamp(60px, 8vw, 140px);
+      gap:
+        clamp(
+          60px,
+          8vw,
+          140px
+        );
 
       align-items: start;
     }
 
     .shows {
-      border-top: 1px solid rgba(255,255,255,0.2);
+      border-top:
+        1px solid
+        rgba(255,255,255,0.2);
     }
 
     .show {
@@ -367,9 +546,14 @@
 
       padding: 23px 0;
 
-      border-bottom: 1px solid rgba(255,255,255,0.13);
+      border-bottom:
+        1px solid
+        rgba(255,255,255,0.13);
 
-      transition: opacity 0.25s ease;
+      transition:
+        opacity
+        0.25s
+        ease;
     }
 
     .show:hover {
@@ -378,12 +562,15 @@
 
     .show-date {
       font-size: 9px;
+
       letter-spacing: 0.13em;
+
       opacity: 0.33;
     }
 
     .show-venue {
       font-size: 13px;
+
       letter-spacing: 0.025em;
     }
 
@@ -391,25 +578,33 @@
       margin-top: 5px;
 
       font-size: 8px;
+
       letter-spacing: 0.15em;
+
       opacity: 0.32;
     }
 
     .show-location {
       font-size: 9px;
+
       letter-spacing: 0.17em;
+
       opacity: 0.4;
+
       text-align: right;
     }
 
     .live-visual {
       position: sticky;
+
       top: 110px;
     }
 
     .live-image {
       width: 100%;
+
       overflow: hidden;
+
       background: #111;
     }
 
@@ -419,17 +614,25 @@
       aspect-ratio: 4 / 5;
 
       object-fit: cover;
+
       object-position: center center;
 
-      filter: brightness(0.88);
+      filter:
+        brightness(0.88);
 
       transition:
-        transform 0.9s cubic-bezier(.2,.7,.2,1),
-        filter 0.4s ease;
+        transform
+          0.9s
+          cubic-bezier(.2,.7,.2,1),
+
+        filter
+          0.4s
+          ease;
     }
 
     .live-image:hover img {
       transform: scale(1.012);
+
       filter: brightness(1);
     }
 
@@ -437,17 +640,22 @@
       margin-top: 14px;
 
       display: flex;
+
       justify-content: space-between;
 
       gap: 20px;
 
       font-size: 8px;
+
       letter-spacing: 0.18em;
+
       opacity: 0.3;
     }
 
 
-    /* ABOUT */
+    /* =========================================================
+       ABOUT
+    ========================================================= */
 
     .about-layout {
       max-width: 1450px;
@@ -460,7 +668,12 @@
         minmax(420px, 0.9fr)
         minmax(420px, 1.1fr);
 
-      gap: clamp(70px, 9vw, 150px);
+      gap:
+        clamp(
+          70px,
+          9vw,
+          150px
+        );
 
       align-items: start;
     }
@@ -474,7 +687,12 @@
 
       max-width: 720px;
 
-      font-size: clamp(30px, 3.6vw, 56px);
+      font-size:
+        clamp(
+          30px,
+          3.6vw,
+          56px
+        );
 
       line-height: 1.05;
 
@@ -490,19 +708,25 @@
 
       max-width: 560px;
 
-      border-top: 1px solid rgba(255,255,255,0.15);
+      border-top:
+        1px solid
+        rgba(255,255,255,0.15);
     }
 
     .about-row {
       display: grid;
 
-      grid-template-columns: 110px 1fr;
+      grid-template-columns:
+        110px
+        1fr;
 
       gap: 30px;
 
       padding: 17px 0;
 
-      border-bottom: 1px solid rgba(255,255,255,0.12);
+      border-bottom:
+        1px solid
+        rgba(255,255,255,0.12);
 
       font-size: 9px;
 
@@ -538,7 +762,10 @@
 
       object-position: center center;
 
-      transition: transform 0.9s cubic-bezier(.2,.7,.2,1);
+      transition:
+        transform
+        0.9s
+        cubic-bezier(.2,.7,.2,1);
     }
 
     .about-photo:hover img {
@@ -550,7 +777,11 @@
 
       max-width: 580px;
 
-      margin: 14px 0 0 auto;
+      margin:
+        14px
+        0
+        0
+        auto;
 
       display: flex;
 
@@ -576,14 +807,22 @@
 
       padding: 17px 0;
 
-      border-top: 1px solid rgba(255,255,255,0.35);
-      border-bottom: 1px solid rgba(255,255,255,0.35);
+      border-top:
+        1px solid
+        rgba(255,255,255,0.35);
+
+      border-bottom:
+        1px solid
+        rgba(255,255,255,0.35);
 
       font-size: 10px;
 
       letter-spacing: 0.2em;
 
-      transition: opacity 0.25s ease;
+      transition:
+        opacity
+        0.25s
+        ease;
     }
 
     .epk-link:hover {
@@ -591,7 +830,9 @@
     }
 
 
-    /* CONTACT */
+    /* =========================================================
+       CONTACT
+    ========================================================= */
 
     .contact {
       min-height: 80vh;
@@ -620,7 +861,9 @@
 
       letter-spacing: 0.18em;
 
-      border-bottom: 1px solid rgba(255,255,255,0.25);
+      border-bottom:
+        1px solid
+        rgba(255,255,255,0.25);
 
       transition:
         opacity 0.25s ease,
@@ -630,46 +873,68 @@
     .contact-link:hover {
       opacity: 0.55;
 
-      border-color: rgba(255,255,255,0.6);
+      border-color:
+        rgba(255,255,255,0.6);
     }
 
     .booking-email {
+      display: inline-block;
+
       margin-top: 45px;
 
-      font-size: clamp(18px, 2vw, 28px);
+      font-size:
+        clamp(
+          18px,
+          2vw,
+          28px
+        );
 
       letter-spacing: -0.02em;
 
       opacity: 0.55;
+
+      transition:
+        opacity
+        0.25s
+        ease;
     }
 
     .booking-email:hover {
       opacity: 1;
     }
 
+
+    /* =========================================================
+       FOOTER
+    ========================================================= */
+
     footer {
       padding-top: 100px;
-
-      font-size: 10px;
-
-      opacity: 0.35;
 
       display: flex;
 
       justify-content: space-between;
+
+      font-size: 10px;
+
+      opacity: 0.35;
     }
 
 
-    /* TABLET */
+    /* =========================================================
+       TABLET
+    ========================================================= */
 
     @media (max-width: 1050px) {
 
       .music-release {
+
         grid-template-columns:
           minmax(260px, 420px)
           minmax(260px, 1fr);
 
         gap: 50px;
+
       }
 
       .cover-wrap {
@@ -680,34 +945,52 @@
         padding-top: 40px;
       }
 
+
       .live-layout {
-        grid-template-columns: 1fr 0.65fr;
+
+        grid-template-columns:
+          1fr
+          0.65fr;
 
         gap: 50px;
+
       }
 
       .show {
-        grid-template-columns: 85px 1fr;
+
+        grid-template-columns:
+          85px
+          1fr;
+
       }
 
       .show-location {
+
         grid-column: 2;
 
         text-align: left;
 
         margin-top: -12px;
+
       }
 
+
       .about-layout {
-        grid-template-columns: 1fr 0.8fr;
+
+        grid-template-columns:
+          1fr
+          0.8fr;
 
         gap: 55px;
+
       }
 
     }
 
 
-    /* MOBILE */
+    /* =========================================================
+       MOBILE
+    ========================================================= */
 
     @media (max-width: 700px) {
 
@@ -729,9 +1012,16 @@
       }
 
 
+      /* HERO */
+
       .hero {
+
         padding: 20px;
-        background-position: 58% center;
+
+        background-position:
+          58%
+          center;
+
       }
 
       .hero-content {
@@ -739,29 +1029,46 @@
       }
 
       h1 {
-        font-size: 17.5vw;
-        line-height: 0.84;
+
         max-width: 100%;
+
+        font-size: 17.5vw;
+
+        line-height: 0.84;
+
       }
 
       .subtitle {
+
+        max-width: 300px;
+
         font-size: 9px;
-        letter-spacing: 0.18em;
-        line-height: 1.5;
+
+        letter-spacing: 0.16em;
+
+        line-height: 1.65;
+
       }
 
       .scroll {
+
         right: 20px;
+
         bottom: 20px;
+
       }
 
 
+      /* MUSIC */
+
       .music-release {
+
         grid-template-columns: 1fr;
 
         gap: 45px;
 
         margin-top: 60px;
+
       }
 
       .cover-wrap {
@@ -769,8 +1076,11 @@
       }
 
       .release-meta {
+
         max-width: none;
+
         padding-top: 0;
+
       }
 
       .release-meta h3 {
@@ -782,28 +1092,38 @@
       }
 
 
+      /* LIVE */
+
       .live-layout {
+
         grid-template-columns: 1fr;
 
         gap: 60px;
 
         margin-top: 60px;
+
       }
 
       .show {
-        grid-template-columns: 75px 1fr;
+
+        grid-template-columns:
+          75px
+          1fr;
 
         gap: 14px;
 
         padding: 21px 0;
+
       }
 
       .show-location {
+
         grid-column: 2;
 
         text-align: left;
 
         margin-top: -8px;
+
       }
 
       .live-visual {
@@ -811,18 +1131,24 @@
       }
 
       .live-image {
+
         width: 86%;
 
         margin-left: auto;
+
       }
 
 
+      /* ABOUT */
+
       .about-layout {
+
         grid-template-columns: 1fr;
 
         gap: 65px;
 
         margin-top: 60px;
+
       }
 
       .about-copy {
@@ -838,15 +1164,21 @@
       }
 
       .about-row {
-        grid-template-columns: 80px 1fr;
+
+        grid-template-columns:
+          80px
+          1fr;
 
         gap: 20px;
+
       }
 
       .about-photo {
+
         width: 86%;
 
         margin-left: auto;
+
       }
 
       .about-photo-caption {
@@ -858,15 +1190,20 @@
       }
 
 
+      /* CONTACT */
+
       .contact-links {
+
         flex-direction: column;
 
         gap: 10px;
 
         margin-top: 70px;
+
       }
 
       .contact-link {
+
         width: 100%;
 
         display: flex;
@@ -874,6 +1211,7 @@
         justify-content: space-between;
 
         padding: 18px 0;
+
       }
 
       .booking-email {
@@ -882,9 +1220,11 @@
 
 
       footer {
+
         gap: 20px;
 
         flex-direction: column;
+
       }
 
     }
@@ -899,68 +1239,102 @@
 
 <header>
 
-  <a class="logo" href="#top">
+  <a
+    class="logo"
+    href="#top"
+    aria-label="Chris Gavin — Home"
+  >
     CG
   </a>
 
-  <nav>
-    <a href="#music">MUSIC</a>
-    <a href="#live">LIVE</a>
-    <a href="#about">ABOUT</a>
-    <a href="#contact">CONTACT</a>
+
+  <nav aria-label="Main navigation">
+
+    <a href="#music">
+      MUSIC
+    </a>
+
+    <a href="#live">
+      LIVE
+    </a>
+
+    <a href="#about">
+      ABOUT
+    </a>
+
+    <a href="#contact">
+      CONTACT
+    </a>
+
   </nav>
 
 </header>
 
 
+
 <main id="top">
 
 
-  <!-- HERO -->
+  <!-- =====================================================
+       HERO
+  ====================================================== -->
 
   <section class="hero">
 
+
     <div class="hero-content">
+
 
       <h1>
         CHRIS GAVIN
       </h1>
 
+
       <div class="subtitle">
-        DJ · PRODUCER · MARSEILLE
+        DJ · PRODUCER · ARTISTIC DIRECTOR · MARSEILLE
       </div>
 
+
     </div>
+
 
     <div class="scroll">
       SCROLL ↓
     </div>
 
+
   </section>
 
 
 
-  <!-- MUSIC -->
+  <!-- =====================================================
+       MUSIC
+  ====================================================== -->
 
   <section id="music">
+
 
     <div class="section-number">
       01 — SELECTED MUSIC
     </div>
 
+
     <h2 class="section-title">
       MUSIC
     </h2>
+
 
     <div class="music-release">
 
 
       <div class="cover-wrap">
 
+
         <img
           src="enough-ep.jpg"
-          alt="E-Nough by Chris Gavin"
+          alt="Chris Gavin — E-Nough EP artwork"
         >
+
 
       </div>
 
@@ -970,9 +1344,12 @@
 
         <div class="release-label">
 
+
           <span class="release-dot"></span>
 
+
           SELECTED RELEASE
+
 
         </div>
 
@@ -999,7 +1376,9 @@
 
         <a
           class="listen"
-          href="#"
+          href="https://songwhip.com/chris-gavin/enough"
+          target="_blank"
+          rel="noopener noreferrer"
         >
 
           <span>
@@ -1018,21 +1397,27 @@
 
     </div>
 
+
   </section>
 
 
 
-  <!-- LIVE -->
+  <!-- =====================================================
+       LIVE
+  ====================================================== -->
 
   <section id="live">
+
 
     <div class="section-number">
       02 — LIVE ARCHIVE
     </div>
 
+
     <h2 class="section-title">
       LIVE
     </h2>
+
 
     <div class="live-intro">
       INTERNATIONAL & SELECTED FRANCE · 2021—2026
@@ -1046,127 +1431,401 @@
 
 
         <div class="show">
-          <div class="show-date">07.08.26</div>
-          <div><div class="show-venue">NOUS FESTIVAL</div></div>
-          <div class="show-location">BELLOCQ · FR</div>
-        </div>
 
-        <div class="show">
-          <div class="show-date">11.09.25</div>
-          <div><div class="show-venue">MOSPHERA · MALAGA SIN CITY</div></div>
-          <div class="show-location">MILAN · IT</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">14.08.25</div>
-          <div><div class="show-venue">LA TERRRAZZA</div></div>
-          <div class="show-location">BARCELONA · ES</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">31.05.25</div>
-          <div><div class="show-venue">CARPE DIEM EXPERIENCE</div></div>
-          <div class="show-location">MOST · CZ</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">02.05.25</div>
-          <div><div class="show-venue">CULTURE BOX</div></div>
-          <div class="show-location">COPENHAGEN · DK</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">12.02.25</div>
-          <div>
-            <div class="show-venue">OTHERSIDE #009</div>
-            <div class="show-detail">MOONKIZA B2B CHRIS GAVIN</div>
+          <div class="show-date">
+            07.08.26
           </div>
-          <div class="show-location">BARCELONA · ES</div>
-        </div>
 
-        <div class="show">
-          <div class="show-date">08.02.25</div>
-          <div><div class="show-venue">BONNEFOOI</div></div>
-          <div class="show-location">BRUSSELS · BE</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">26.10.24</div>
-          <div><div class="show-venue">SHEA · FREEDONIA</div></div>
-          <div class="show-location">BARCELONA · ES</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">08.06.24</div>
-          <div><div class="show-venue">DISCO BIZARRE · KITKATCLUB</div></div>
-          <div class="show-location">BERLIN · DE</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">07.06.24</div>
-          <div><div class="show-venue">WURZELFESTIVAL</div></div>
-          <div class="show-location">GERMANY · DE</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">17.02.24</div>
-          <div><div class="show-venue">SHEA · FREEDONIA</div></div>
-          <div class="show-location">BARCELONA · ES</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">31.12.23</div>
-          <div><div class="show-venue">CULTURE BOX · NYE</div></div>
-          <div class="show-location">COPENHAGEN · DK</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">26.03.23</div>
-          <div><div class="show-venue">AFTER O'CLOCK · GLAZART</div></div>
-          <div class="show-location">PARIS · FR</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">30.09.22</div>
-          <div><div class="show-venue">BLT · SILENCIO</div></div>
-          <div class="show-location">PARIS · FR</div>
-        </div>
-
-        <div class="show">
-          <div class="show-date">24.09.22</div>
           <div>
-            <div class="show-venue">UTOPIA FESTIVAL</div>
-            <div class="show-detail">CHRIS GAVIN B2B REMAIN</div>
+
+            <div class="show-venue">
+              NOUS FESTIVAL
+            </div>
+
           </div>
-          <div class="show-location">MARSEILLE · FR</div>
+
+          <div class="show-location">
+            BELLOCQ · FR
+          </div>
+
         </div>
 
+
         <div class="show">
-          <div class="show-date">31.07.22</div>
+
+          <div class="show-date">
+            11.09.25
+          </div>
+
           <div>
-            <div class="show-venue">FAMILY PIKNIK · OPENING</div>
-            <div class="show-detail">GABRIEL I B2B CHRIS GAVIN</div>
+
+            <div class="show-venue">
+              MOSPHERA · MALAGA SIN CITY
+            </div>
+
           </div>
-          <div class="show-location">LUNEL · FR</div>
+
+          <div class="show-location">
+            MILAN · IT
+          </div>
+
         </div>
 
-        <div class="show">
-          <div class="show-date">12.06.22</div>
-          <div><div class="show-venue">AFTER O'CLOCK SUMMER CAMP · GLAZART</div></div>
-          <div class="show-location">PARIS · FR</div>
-        </div>
 
         <div class="show">
-          <div class="show-date">17.09.21</div>
+
+          <div class="show-date">
+            14.08.25
+          </div>
+
           <div>
-            <div class="show-venue">R2 ROOFTOP · TUNNEL OF LOVE</div>
-            <div class="show-detail">WITH PEGGY GOU · DID VIRGO</div>
+
+            <div class="show-venue">
+              LA TERRRAZZA
+            </div>
+
           </div>
-          <div class="show-location">MARSEILLE · FR</div>
+
+          <div class="show-location">
+            BARCELONA · ES
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            31.05.25
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              CARPE DIEM EXPERIENCE
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            MOST · CZ
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            02.05.25
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              CULTURE BOX
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            COPENHAGEN · DK
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            12.02.25
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              OTHERSIDE #009
+            </div>
+
+            <div class="show-detail">
+              MOONKIZA B2B CHRIS GAVIN
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            BARCELONA · ES
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            08.02.25
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              BONNEFOOI
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            BRUSSELS · BE
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            26.10.24
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              SHEA · FREEDONIA
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            BARCELONA · ES
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            08.06.24
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              DISCO BIZARRE · KITKATCLUB
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            BERLIN · DE
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            07.06.24
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              WURZELFESTIVAL
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            GERMANY · DE
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            17.02.24
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              SHEA · FREEDONIA
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            BARCELONA · ES
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            31.12.23
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              CULTURE BOX · NYE
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            COPENHAGEN · DK
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            26.03.23
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              AFTER O'CLOCK · GLAZART
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            PARIS · FR
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            30.09.22
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              BLT · SILENCIO
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            PARIS · FR
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            24.09.22
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              UTOPIA FESTIVAL
+            </div>
+
+            <div class="show-detail">
+              CHRIS GAVIN B2B REMAIN
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            MARSEILLE · FR
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            31.07.22
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              FAMILY PIKNIK · OPENING
+            </div>
+
+            <div class="show-detail">
+              GABRIEL I B2B CHRIS GAVIN
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            LUNEL · FR
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            12.06.22
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              AFTER O'CLOCK SUMMER CAMP · GLAZART
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            PARIS · FR
+          </div>
+
+        </div>
+
+
+        <div class="show">
+
+          <div class="show-date">
+            17.09.21
+          </div>
+
+          <div>
+
+            <div class="show-venue">
+              R2 ROOFTOP · TUNNEL OF LOVE
+            </div>
+
+            <div class="show-detail">
+              WITH PEGGY GOU · DID VIRGO
+            </div>
+
+          </div>
+
+          <div class="show-location">
+            MARSEILLE · FR
+          </div>
+
         </div>
 
 
       </div>
+
 
 
       <div class="live-visual">
@@ -1174,23 +1833,28 @@
 
         <div class="live-image">
 
+
           <img
             src="Chris-Gavin_Live-CarpeDiem-2025_KarelRichtr_01.jpg"
-            alt="Chris Gavin performing at Carpe Diem"
+            alt="Chris Gavin live at Carpe Diem Experience 2025"
           >
+
 
         </div>
 
 
         <div class="live-caption">
 
+
           <span>
             LIVE
           </span>
 
+
           <span>
             CARPE DIEM · 2025
           </span>
+
 
         </div>
 
@@ -1200,17 +1864,22 @@
 
     </div>
 
+
   </section>
 
 
 
-  <!-- ABOUT -->
+  <!-- =====================================================
+       ABOUT
+  ====================================================== -->
 
   <section id="about">
+
 
     <div class="section-number">
       03 — ABOUT
     </div>
+
 
     <h2 class="section-title">
       CHRIS GAVIN
@@ -1244,39 +1913,48 @@
 
           <div class="about-row">
 
+
             <div class="about-key">
               BASED
             </div>
+
 
             <div class="about-value">
               MARSEILLE · FRANCE
             </div>
 
+
           </div>
 
 
           <div class="about-row">
+
 
             <div class="about-key">
               ROLE
             </div>
 
+
             <div class="about-value">
               DJ · PRODUCER · ARTISTIC DIRECTOR
             </div>
+
 
           </div>
 
 
           <div class="about-row">
 
+
             <div class="about-key">
               CLUB
             </div>
 
+
             <div class="about-value">
               DANCETERIA · MARSEILLE
             </div>
+
 
           </div>
 
@@ -1289,13 +1967,16 @@
           href="epk.html"
         >
 
+
           <span>
             EPK / PRESS
           </span>
 
+
           <span>
             ↗
           </span>
+
 
         </a>
 
@@ -1303,28 +1984,34 @@
       </div>
 
 
+
       <div>
 
 
         <div class="about-photo">
 
+
           <img
             src="Chris gavin 2023.jpg"
-            alt="Chris Gavin"
+            alt="Chris Gavin portrait"
           >
+
 
         </div>
 
 
         <div class="about-photo-caption">
 
+
           <span>
             CHRIS GAVIN
           </span>
 
+
           <span>
             MARSEILLE
           </span>
+
 
         </div>
 
@@ -1334,11 +2021,14 @@
 
     </div>
 
+
   </section>
 
 
 
-  <!-- CONTACT -->
+  <!-- =====================================================
+       CONTACT
+  ====================================================== -->
 
   <section
     id="contact"
@@ -1355,8 +2045,10 @@
 
 
       <h2 class="section-title">
+
         LET'S<br>
         TALK.
+
       </h2>
 
 
@@ -1364,7 +2056,9 @@
         class="booking-email"
         href="mailto:booking@djchrisgavin.com"
       >
+
         booking@djchrisgavin.com
+
       </a>
 
 
@@ -1375,7 +2069,9 @@
           class="contact-link"
           href="mailto:booking@djchrisgavin.com"
         >
+
           BOOKING ↗
+
         </a>
 
 
@@ -1385,7 +2081,9 @@
           target="_blank"
           rel="noopener noreferrer"
         >
+
           INSTAGRAM ↗
+
         </a>
 
 
@@ -1395,7 +2093,9 @@
           target="_blank"
           rel="noopener noreferrer"
         >
+
           SPOTIFY ↗
+
         </a>
 
 
@@ -1405,7 +2105,9 @@
           target="_blank"
           rel="noopener noreferrer"
         >
+
           SOUNDCLOUD ↗
+
         </a>
 
 
@@ -1415,15 +2117,19 @@
     </div>
 
 
+
     <footer>
+
 
       <div>
         © 2026 CHRIS GAVIN
       </div>
 
+
       <div>
         MARSEILLE — FRANCE
       </div>
+
 
     </footer>
 
