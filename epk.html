@@ -19,10 +19,108 @@
     content="Chris Gavin electronic press kits and booking information."
   >
 
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+  <meta
+    name="author"
+    content="Chris Gavin"
+  >
+
+  <meta
+    name="theme-color"
+    content="#090909"
+  >
+
+
+  <!-- FAVICON -->
+
+  <link
+    rel="icon"
+    href="favicon.svg"
+    type="image/svg+xml"
+  >
+
+
+  <!-- CANONICAL -->
+
+  <link
+    rel="canonical"
+    href="https://djchrisgavin.com/epk.html"
+  >
+
+
+  <!-- OPEN GRAPH -->
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:title"
+    content="Chris Gavin — EPK / Press"
+  >
+
+  <meta
+    property="og:description"
+    content="Electronic press kits, artist information and booking material for Chris Gavin."
+  >
+
+  <meta
+    property="og:url"
+    content="https://djchrisgavin.com/epk.html"
+  >
+
+  <meta
+    property="og:image"
+    content="https://djchrisgavin.com/chris-gavin-hero.jpeg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Chris Gavin"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Chris Gavin"
+  >
+
+
+  <!-- SOCIAL PREVIEW -->
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Chris Gavin — EPK / Press"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Electronic press kits and booking material for Chris Gavin."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://djchrisgavin.com/chris-gavin-hero.jpeg"
+  >
+
+
   <style>
 
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -38,6 +136,8 @@
         Arial,
         Helvetica,
         sans-serif;
+
+      font-weight: 400;
     }
 
     a {
@@ -47,7 +147,9 @@
     }
 
 
-    /* HEADER */
+    /* =========================================================
+       HEADER
+    ========================================================= */
 
     header {
       width: 100%;
@@ -74,7 +176,10 @@
 
       opacity: 0.45;
 
-      transition: opacity 0.25s ease;
+      transition:
+        opacity
+        0.25s
+        ease;
     }
 
     .back:hover {
@@ -82,10 +187,15 @@
     }
 
 
-    /* MAIN */
+    /* =========================================================
+       MAIN
+    ========================================================= */
 
     main {
-      min-height: calc(100vh - 75px);
+      min-height:
+        calc(
+          100vh - 75px
+        );
 
       padding:
         90px
@@ -99,17 +209,15 @@
       justify-content: space-between;
     }
 
-
     .eyebrow {
+      margin-bottom: 45px;
+
       font-size: 9px;
 
       letter-spacing: 0.23em;
 
       opacity: 0.38;
-
-      margin-bottom: 45px;
     }
-
 
     h1 {
       margin: 0;
@@ -127,7 +235,6 @@
 
       line-height: 0.8;
     }
-
 
     .intro {
       max-width: 670px;
@@ -149,7 +256,26 @@
     }
 
 
-    /* EPK LIST */
+    /* =========================================================
+       RED DETAIL
+    ========================================================= */
+
+    .red-dot {
+      width: 7px;
+
+      height: 7px;
+
+      margin-top: 60px;
+
+      border-radius: 50%;
+
+      background: #a42018;
+    }
+
+
+    /* =========================================================
+       EPK LIST
+    ========================================================= */
 
     .epk-list {
       margin-top: 110px;
@@ -158,7 +284,6 @@
         1px solid
         rgba(255,255,255,0.16);
     }
-
 
     .epk-item {
       position: relative;
@@ -181,14 +306,14 @@
         rgba(255,255,255,0.16);
 
       transition:
-        opacity 0.25s ease;
+        opacity
+        0.25s
+        ease;
     }
-
 
     .epk-item:hover {
       opacity: 0.55;
     }
-
 
     .epk-index {
       font-size: 9px;
@@ -197,7 +322,6 @@
 
       opacity: 0.28;
     }
-
 
     .epk-title {
       font-size:
@@ -212,7 +336,6 @@
       line-height: 1;
     }
 
-
     .epk-description {
       margin-top: 10px;
 
@@ -223,7 +346,6 @@
       opacity: 0.32;
     }
 
-
     .epk-arrow {
       font-size: 18px;
 
@@ -231,22 +353,9 @@
     }
 
 
-    /* RED DETAIL */
-
-    .red-dot {
-      width: 7px;
-
-      height: 7px;
-
-      margin-top: 60px;
-
-      border-radius: 50%;
-
-      background: #a42018;
-    }
-
-
-    /* FOOTER */
+    /* =========================================================
+       FOOTER
+    ========================================================= */
 
     footer {
       margin-top: 100px;
@@ -269,7 +378,9 @@
     }
 
 
-    /* MOBILE */
+    /* =========================================================
+       MOBILE
+    ========================================================= */
 
     @media (max-width: 700px) {
 
@@ -315,6 +426,10 @@
         font-size: 8vw;
       }
 
+      .epk-description {
+        line-height: 1.5;
+      }
+
       footer {
         flex-direction: column;
 
@@ -336,6 +451,7 @@
   <a
     class="logo"
     href="index.html"
+    aria-label="Chris Gavin — Home"
   >
     CG
   </a>
@@ -350,6 +466,7 @@
 </header>
 
 
+
 <main>
 
 
@@ -362,8 +479,10 @@
 
 
     <h1>
+
       EPK /<br>
       PRESS
+
     </h1>
 
 
@@ -379,10 +498,13 @@
     <div class="red-dot"></div>
 
 
+
     <div class="epk-list">
 
 
-      <!-- HOUSE / PROGRESSIVE -->
+      <!-- =====================================================
+           HOUSE / PROGRESSIVE
+      ====================================================== -->
 
       <a
         class="epk-item"
@@ -391,6 +513,7 @@
         rel="noopener noreferrer"
       >
 
+
         <div class="epk-index">
           01
         </div>
@@ -398,13 +521,16 @@
 
         <div>
 
+
           <div class="epk-title">
             HOUSE / PROGRESSIVE
           </div>
 
+
           <div class="epk-description">
             HOUSE · PROGRESSIVE HOUSE · MELODIC ELECTRONICS
           </div>
+
 
         </div>
 
@@ -413,11 +539,14 @@
           ↗
         </div>
 
+
       </a>
 
 
 
-      <!-- INDIE / DARK -->
+      <!-- =====================================================
+           INDIE / DARK
+      ====================================================== -->
 
       <a
         class="epk-item"
@@ -426,6 +555,7 @@
         rel="noopener noreferrer"
       >
 
+
         <div class="epk-index">
           02
         </div>
@@ -433,13 +563,16 @@
 
         <div>
 
+
           <div class="epk-title">
             INDIE / DARK
           </div>
 
+
           <div class="epk-description">
             INDIE DANCE · DARK DISCO · SLOW TECHNO
           </div>
+
 
         </div>
 
@@ -447,6 +580,7 @@
         <div class="epk-arrow">
           ↗
         </div>
+
 
       </a>
 
@@ -457,15 +591,21 @@
   </div>
 
 
+
   <footer>
+
 
     <span>
       © 2026 CHRIS GAVIN
     </span>
 
-    <span>
+
+    <a
+      href="mailto:booking@djchrisgavin.com"
+    >
       BOOKING@DJCHRISGAVIN.COM
-    </span>
+    </a>
+
 
   </footer>
 
