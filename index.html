@@ -34,11 +34,16 @@
     content="#090909"
   >
 
-<link
-  rel="icon"
-  href="favicon.svg"
-  type="image/svg+xml"
->
+
+  <!-- FAVICON -->
+
+  <link
+    rel="icon"
+    href="favicon.svg"
+    type="image/svg+xml"
+  >
+
+
   <!-- CANONICAL -->
 
   <link
@@ -85,7 +90,7 @@
   >
 
 
-  <!-- TWITTER / SOCIAL PREVIEW -->
+  <!-- SOCIAL PREVIEW -->
 
   <meta
     name="twitter:card"
@@ -131,6 +136,8 @@
         sans-serif;
 
       font-weight: 400;
+
+      overflow-x: hidden;
     }
 
     a {
@@ -190,7 +197,10 @@
     nav a {
       opacity: 0.7;
 
-      transition: opacity 0.25s ease;
+      transition:
+        opacity
+        0.25s
+        ease;
     }
 
     nav a:hover {
@@ -303,6 +313,8 @@
       border-top:
         1px solid
         rgba(255,255,255,0.12);
+
+      scroll-margin-top: 90px;
     }
 
     .section-number {
@@ -487,11 +499,23 @@
 
       letter-spacing: 0.2em;
 
-      transition: opacity 0.25s ease;
+      transition:
+        opacity
+        0.25s
+        ease;
     }
 
     .listen:hover {
       opacity: 0.55;
+    }
+
+    .arrow-text {
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      font-variant-emoji: text;
     }
 
 
@@ -1013,6 +1037,8 @@
 
       section {
         padding: 100px 20px;
+
+        scroll-margin-top: 78px;
       }
 
 
@@ -1044,7 +1070,7 @@
 
       .subtitle {
 
-        max-width: 300px;
+        max-width: 330px;
 
         font-size: 9px;
 
@@ -1112,12 +1138,16 @@
 
         grid-template-columns:
           75px
-          1fr;
+          minmax(0, 1fr);
 
         gap: 14px;
 
         padding: 21px 0;
 
+      }
+
+      .show-venue {
+        line-height: 1.25;
       }
 
       .show-location {
@@ -1145,6 +1175,10 @@
 
       /* ABOUT */
 
+      #about {
+        padding-top: 145px;
+      }
+
       .about-layout {
 
         grid-template-columns: 1fr;
@@ -1160,21 +1194,33 @@
       }
 
       .about-lead {
-        font-size: 9vw;
+
+        max-width: 100%;
+
+        font-size: 7.8vw;
+
+        line-height: 1.08;
+
+        letter-spacing: -0.04em;
+
       }
 
       .about-meta {
-        margin-top: 50px;
+        margin-top: 55px;
       }
 
       .about-row {
 
         grid-template-columns:
           80px
-          1fr;
+          minmax(0, 1fr);
 
         gap: 20px;
 
+      }
+
+      .about-value {
+        line-height: 1.5;
       }
 
       .about-photo {
@@ -1214,14 +1260,24 @@
 
         justify-content: space-between;
 
+        align-items: center;
+
         padding: 18px 0;
 
       }
 
       .booking-email {
+
+        max-width: 100%;
+
         font-size: 17px;
+
+        overflow-wrap: anywhere;
+
       }
 
+
+      /* FOOTER */
 
       footer {
 
@@ -1279,9 +1335,7 @@
 <main id="top">
 
 
-  <!-- =====================================================
-       HERO
-  ====================================================== -->
+  <!-- HERO -->
 
   <section class="hero">
 
@@ -1311,9 +1365,7 @@
 
 
 
-  <!-- =====================================================
-       MUSIC
-  ====================================================== -->
+  <!-- MUSIC -->
 
   <section id="music">
 
@@ -1389,8 +1441,11 @@
             LISTEN
           </span>
 
-          <span>
-            ↗
+          <span
+            class="arrow-text"
+            aria-hidden="true"
+          >
+            ↗︎
           </span>
 
         </a>
@@ -1406,9 +1461,7 @@
 
 
 
-  <!-- =====================================================
-       LIVE
-  ====================================================== -->
+  <!-- LIVE -->
 
   <section id="live">
 
@@ -1435,107 +1488,37 @@
 
 
         <div class="show">
-
-          <div class="show-date">
-            07.08.26
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              NOUS FESTIVAL
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            BELLOCQ · FR
-          </div>
-
+          <div class="show-date">07.08.26</div>
+          <div><div class="show-venue">NOUS FESTIVAL</div></div>
+          <div class="show-location">BELLOCQ · FR</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            11.09.25
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              MOSPHERA · MALAGA SIN CITY
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            MILAN · IT
-          </div>
-
+          <div class="show-date">11.09.25</div>
+          <div><div class="show-venue">MOSPHERA · MALAGA SIN CITY</div></div>
+          <div class="show-location">MILAN · IT</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            14.08.25
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              LA TERRRAZZA
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            BARCELONA · ES
-          </div>
-
+          <div class="show-date">14.08.25</div>
+          <div><div class="show-venue">LA TERRRAZZA</div></div>
+          <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            31.05.25
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              CARPE DIEM EXPERIENCE
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            MOST · CZ
-          </div>
-
+          <div class="show-date">31.05.25</div>
+          <div><div class="show-venue">CARPE DIEM EXPERIENCE</div></div>
+          <div class="show-location">MOST · CZ</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            02.05.25
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              CULTURE BOX
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            COPENHAGEN · DK
-          </div>
-
+          <div class="show-date">02.05.25</div>
+          <div><div class="show-venue">CULTURE BOX</div></div>
+          <div class="show-location">COPENHAGEN · DK</div>
         </div>
 
 
@@ -1565,170 +1548,58 @@
 
 
         <div class="show">
-
-          <div class="show-date">
-            08.02.25
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              BONNEFOOI
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            BRUSSELS · BE
-          </div>
-
+          <div class="show-date">08.02.25</div>
+          <div><div class="show-venue">BONNEFOOI</div></div>
+          <div class="show-location">BRUSSELS · BE</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            26.10.24
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              SHEA · FREEDONIA
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            BARCELONA · ES
-          </div>
-
+          <div class="show-date">26.10.24</div>
+          <div><div class="show-venue">SHEA · FREEDONIA</div></div>
+          <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            08.06.24
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              DISCO BIZARRE · KITKATCLUB
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            BERLIN · DE
-          </div>
-
+          <div class="show-date">08.06.24</div>
+          <div><div class="show-venue">DISCO BIZARRE · KITKATCLUB</div></div>
+          <div class="show-location">BERLIN · DE</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            07.06.24
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              WURZELFESTIVAL
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            GERMANY · DE
-          </div>
-
+          <div class="show-date">07.06.24</div>
+          <div><div class="show-venue">WURZELFESTIVAL</div></div>
+          <div class="show-location">GERMANY · DE</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            17.02.24
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              SHEA · FREEDONIA
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            BARCELONA · ES
-          </div>
-
+          <div class="show-date">17.02.24</div>
+          <div><div class="show-venue">SHEA · FREEDONIA</div></div>
+          <div class="show-location">BARCELONA · ES</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            31.12.23
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              CULTURE BOX · NYE
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            COPENHAGEN · DK
-          </div>
-
+          <div class="show-date">31.12.23</div>
+          <div><div class="show-venue">CULTURE BOX · NYE</div></div>
+          <div class="show-location">COPENHAGEN · DK</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            26.03.23
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              AFTER O'CLOCK · GLAZART
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            PARIS · FR
-          </div>
-
+          <div class="show-date">26.03.23</div>
+          <div><div class="show-venue">AFTER O'CLOCK · GLAZART</div></div>
+          <div class="show-location">PARIS · FR</div>
         </div>
 
 
         <div class="show">
-
-          <div class="show-date">
-            30.09.22
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              BLT · SILENCIO
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            PARIS · FR
-          </div>
-
+          <div class="show-date">30.09.22</div>
+          <div><div class="show-venue">BLT · SILENCIO</div></div>
+          <div class="show-location">PARIS · FR</div>
         </div>
 
 
@@ -1783,23 +1654,9 @@
 
 
         <div class="show">
-
-          <div class="show-date">
-            12.06.22
-          </div>
-
-          <div>
-
-            <div class="show-venue">
-              AFTER O'CLOCK SUMMER CAMP · GLAZART
-            </div>
-
-          </div>
-
-          <div class="show-location">
-            PARIS · FR
-          </div>
-
+          <div class="show-date">12.06.22</div>
+          <div><div class="show-venue">AFTER O'CLOCK SUMMER CAMP · GLAZART</div></div>
+          <div class="show-location">PARIS · FR</div>
         </div>
 
 
@@ -1873,9 +1730,7 @@
 
 
 
-  <!-- =====================================================
-       ABOUT
-  ====================================================== -->
+  <!-- ABOUT -->
 
   <section id="about">
 
@@ -1917,48 +1772,39 @@
 
           <div class="about-row">
 
-
             <div class="about-key">
               BASED
             </div>
-
 
             <div class="about-value">
               MARSEILLE · FRANCE
             </div>
 
-
           </div>
 
 
           <div class="about-row">
-
 
             <div class="about-key">
               ROLE
             </div>
 
-
             <div class="about-value">
               DJ · PRODUCER · ARTISTIC DIRECTOR
             </div>
-
 
           </div>
 
 
           <div class="about-row">
 
-
             <div class="about-key">
               CLUB
             </div>
 
-
             <div class="about-value">
               DANCETERIA · MARSEILLE
             </div>
-
 
           </div>
 
@@ -1971,16 +1817,16 @@
           href="epk.html"
         >
 
-
           <span>
             EPK / PRESS
           </span>
 
-
-          <span>
-            ↗
+          <span
+            class="arrow-text"
+            aria-hidden="true"
+          >
+            ↗︎
           </span>
-
 
         </a>
 
@@ -2030,9 +1876,7 @@
 
 
 
-  <!-- =====================================================
-       CONTACT
-  ====================================================== -->
+  <!-- CONTACT -->
 
   <section
     id="contact"
@@ -2074,7 +1918,16 @@
           href="mailto:booking@djchrisgavin.com"
         >
 
-          BOOKING ↗
+          <span>
+            BOOKING
+          </span>
+
+          <span
+            class="arrow-text"
+            aria-hidden="true"
+          >
+            ↗︎
+          </span>
 
         </a>
 
@@ -2086,7 +1939,16 @@
           rel="noopener noreferrer"
         >
 
-          INSTAGRAM ↗
+          <span>
+            INSTAGRAM
+          </span>
+
+          <span
+            class="arrow-text"
+            aria-hidden="true"
+          >
+            ↗︎
+          </span>
 
         </a>
 
@@ -2098,7 +1960,16 @@
           rel="noopener noreferrer"
         >
 
-          SPOTIFY ↗
+          <span>
+            SPOTIFY
+          </span>
+
+          <span
+            class="arrow-text"
+            aria-hidden="true"
+          >
+            ↗︎
+          </span>
 
         </a>
 
@@ -2110,7 +1981,16 @@
           rel="noopener noreferrer"
         >
 
-          SOUNDCLOUD ↗
+          <span>
+            SOUNDCLOUD
+          </span>
+
+          <span
+            class="arrow-text"
+            aria-hidden="true"
+          >
+            ↗︎
+          </span>
 
         </a>
 
