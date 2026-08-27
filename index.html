@@ -330,21 +330,38 @@
       opacity: .28;
     }
 
+    /* EPK — MORE VISIBLE */
+
     .epk-link {
-      display: inline-flex;
+      display: flex;
       justify-content: space-between;
-      width: 260px;
-      margin-top: 60px;
-      padding: 17px 0;
-      border-top: 1px solid rgba(255,255,255,.35);
-      border-bottom: 1px solid rgba(255,255,255,.35);
-      font-size: 10px;
+      align-items: center;
+      width: 100%;
+      max-width: 430px;
+      margin-top: 65px;
+      padding: 22px 24px;
+      background: #f1f0eb;
+      color: #090909;
+      border: 1px solid #f1f0eb;
+      font-size: 11px;
+      font-weight: 500;
       letter-spacing: .2em;
-      transition: opacity .25s ease;
+      transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease,
+        transform .3s ease;
     }
 
     .epk-link:hover {
-      opacity: .55;
+      background: #a42018;
+      border-color: #a42018;
+      color: #f1f0eb;
+      transform: translateY(-2px);
+    }
+
+    .epk-link .arrow-text {
+      font-size: 16px;
     }
 
     /* MUSIC */
@@ -845,6 +862,8 @@
 
       .epk-link {
         width: 100%;
+        max-width: none;
+        padding: 21px 20px;
       }
 
       .music-release {
@@ -989,7 +1008,6 @@
   </nav>
 </header>
 
-
 <main id="top">
 
   <!-- HERO -->
@@ -1009,7 +1027,6 @@
     </div>
 
   </section>
-
 
   <!-- ABOUT -->
 
@@ -1084,7 +1101,7 @@
           data-ga-event="click_epk"
           data-ga-label="EPK / PRESS"
         >
-          <span>EPK / PRESS</span>
+          <span>EPK / PRESS KIT</span>
           <span class="arrow-text">↗︎</span>
         </a>
 
@@ -1109,7 +1126,6 @@
     </div>
 
   </section>
-
 
   <!-- MUSIC -->
 
@@ -1169,7 +1185,6 @@
       </div>
 
     </div>
-
 
     <div class="selected-tracks-block">
 
@@ -1304,7 +1319,6 @@
     </div>
 
   </section>
-
 
   <!-- LIVE -->
 
@@ -1474,7 +1488,6 @@
 
   </section>
 
-
   <!-- LIVE MEDIA -->
 
   <section id="media">
@@ -1552,7 +1565,6 @@
     </div>
 
   </section>
-
 
   <!-- CONTACT -->
 
@@ -1636,7 +1648,6 @@
   </section>
 
 </main>
-
 
 <!-- GA4 CLICK TRACKING -->
 <script>
