@@ -1,120 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <title>
-    Chris Gavin — EPK / Press
-  </title>
+  <title>Chris Gavin — EPK</title>
 
   <meta
     name="description"
-    content="Chris Gavin electronic press kits and booking information."
+    content="Chris Gavin electronic press kit — House / Progressive and Indie / Dark / Slow Techno."
   >
 
-  <meta
-    name="robots"
-    content="index, follow"
-  >
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Chris Gavin">
+  <meta name="theme-color" content="#090909">
 
-  <meta
-    name="author"
-    content="Chris Gavin"
-  >
-
-  <meta
-    name="theme-color"
-    content="#090909"
-  >
-
-
-  <!-- FAVICON -->
-
-  <link
-    rel="icon"
-    href="favicon.svg"
-    type="image/svg+xml"
-  >
-
-
-  <!-- CANONICAL -->
-
-  <link
-    rel="canonical"
-    href="https://djchrisgavin.com/epk.html"
-  >
-
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://djchrisgavin.com/epk.html">
 
   <!-- OPEN GRAPH -->
-
-  <meta
-    property="og:type"
-    content="website"
-  >
-
-  <meta
-    property="og:title"
-    content="Chris Gavin — EPK / Press"
-  >
-
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chris Gavin — EPK">
   <meta
     property="og:description"
-    content="Electronic press kits, artist information and booking material for Chris Gavin."
+    content="Electronic press kit for Chris Gavin — DJ, producer and artistic director."
   >
+  <meta property="og:url" content="https://djchrisgavin.com/epk.html">
+  <meta property="og:image" content="https://djchrisgavin.com/chris-gavin-hero.jpeg">
+  <meta property="og:site_name" content="Chris Gavin">
 
-  <meta
-    property="og:url"
-    content="https://djchrisgavin.com/epk.html"
-  >
-
-  <meta
-    property="og:image"
-    content="https://djchrisgavin.com/chris-gavin-hero.jpeg"
-  >
-
-  <meta
-    property="og:image:alt"
-    content="Chris Gavin"
-  >
-
-  <meta
-    property="og:site_name"
-    content="Chris Gavin"
-  >
-
-
-  <!-- SOCIAL PREVIEW -->
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-  <meta
-    name="twitter:title"
-    content="Chris Gavin — EPK / Press"
-  >
-
+  <!-- TWITTER -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Chris Gavin — EPK">
   <meta
     name="twitter:description"
-    content="Electronic press kits and booking material for Chris Gavin."
+    content="Electronic press kit for Chris Gavin — DJ, producer and artistic director."
   >
+  <meta name="twitter:image" content="https://djchrisgavin.com/chris-gavin-hero.jpeg">
 
-  <meta
-    name="twitter:image"
-    content="https://djchrisgavin.com/chris-gavin-hero.jpeg"
-  >
+  <!-- GOOGLE ANALYTICS 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0R5PZ360J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-D0R5PZ360J');
+  </script>
 
   <style>
-
     * {
       box-sizing: border-box;
     }
@@ -125,262 +62,145 @@
 
     body {
       margin: 0;
-
       min-height: 100vh;
-
       background: #090909;
-
       color: #f1f0eb;
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-weight: 400;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     a {
       color: inherit;
-
       text-decoration: none;
     }
 
-
-    /* =========================================================
-       HEADER
-    ========================================================= */
-
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
-
       padding: 28px 40px;
-
       display: flex;
-
       justify-content: space-between;
-
       align-items: center;
+      z-index: 10;
+      background:
+        linear-gradient(
+          to bottom,
+          rgba(9,9,9,.9),
+          rgba(9,9,9,0)
+        );
     }
 
     .logo {
       font-size: 14px;
-
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
     }
 
     .back {
       font-size: 10px;
-
-      letter-spacing: 0.18em;
-
-      opacity: 0.45;
-
-      transition:
-        opacity
-        0.25s
-        ease;
+      letter-spacing: .18em;
+      opacity: .55;
+      transition: opacity .25s ease;
     }
 
     .back:hover {
       opacity: 1;
     }
 
-
-    /* =========================================================
-       MAIN
-    ========================================================= */
-
     main {
-      min-height:
-        calc(
-          100vh - 75px
-        );
-
-      padding:
-        90px
-        40px
-        40px;
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: space-between;
+      padding: 150px 40px 60px;
     }
 
     .eyebrow {
+      font-size: 10px;
+      letter-spacing: .22em;
+      opacity: .42;
       margin-bottom: 45px;
-
-      font-size: 9px;
-
-      letter-spacing: 0.23em;
-
-      opacity: 0.38;
     }
 
     h1 {
       margin: 0;
-
-      font-size:
-        clamp(
-          70px,
-          10vw,
-          160px
-        );
-
+      font-size: clamp(58px, 9vw, 150px);
       font-weight: 400;
-
-      letter-spacing: -0.07em;
-
-      line-height: 0.8;
+      letter-spacing: -.065em;
+      line-height: .86;
     }
 
     .intro {
-      max-width: 670px;
-
-      margin-top: 60px;
-
-      font-size:
-        clamp(
-          18px,
-          2vw,
-          28px
-        );
-
-      line-height: 1.25;
-
-      letter-spacing: -0.025em;
-
-      opacity: 0.5;
+      max-width: 650px;
+      margin-top: 45px;
+      font-size: clamp(16px,1.5vw,21px);
+      line-height: 1.5;
+      color: rgba(241,240,235,.72);
     }
 
-
-    /* =========================================================
-       RED DETAIL
-    ========================================================= */
-
-    .red-dot {
-      width: 7px;
-
-      height: 7px;
-
-      margin-top: 60px;
-
-      border-radius: 50%;
-
-      background: #a42018;
-    }
-
-
-    /* =========================================================
-       EPK LIST
-    ========================================================= */
-
-    .epk-list {
-      margin-top: 110px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,0.16);
+    .epk-grid {
+      max-width: 1250px;
+      margin-top: 100px;
+      border-top: 1px solid rgba(255,255,255,.16);
     }
 
     .epk-item {
-      position: relative;
-
       display: grid;
-
-      grid-template-columns:
-        60px
-        1fr
-        auto;
-
-      gap: 30px;
-
+      grid-template-columns: 70px minmax(0,1fr) 160px 35px;
+      gap: 25px;
       align-items: center;
-
       padding: 34px 0;
-
-      border-bottom:
-        1px solid
-        rgba(255,255,255,0.16);
-
+      border-bottom: 1px solid rgba(255,255,255,.13);
       transition:
-        opacity
-        0.25s
-        ease;
+        opacity .25s ease,
+        transform .25s ease;
     }
 
     .epk-item:hover {
-      opacity: 0.55;
+      opacity: .58;
+      transform: translateX(3px);
     }
 
-    .epk-index {
+    .number {
       font-size: 9px;
-
-      letter-spacing: 0.15em;
-
-      opacity: 0.28;
+      letter-spacing: .16em;
+      opacity: .3;
     }
 
-    .epk-title {
-      font-size:
-        clamp(
-          26px,
-          4vw,
-          58px
-        );
-
-      letter-spacing: -0.045em;
-
+    .title {
+      font-size: clamp(25px,3vw,44px);
+      letter-spacing: -.035em;
       line-height: 1;
     }
 
-    .epk-description {
-      margin-top: 10px;
-
-      font-size: 9px;
-
-      letter-spacing: 0.16em;
-
-      opacity: 0.32;
+    .sub {
+      margin-top: 9px;
+      font-size: 8px;
+      letter-spacing: .18em;
+      opacity: .32;
     }
 
-    .epk-arrow {
-      font-size: 18px;
-
-      opacity: 0.5;
+    .action {
+      text-align: right;
+      font-size: 8px;
+      letter-spacing: .2em;
+      opacity: .42;
     }
 
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
+    .arrow {
+      text-align: right;
+      font-size: 14px;
+      opacity: .5;
+      font-variant-emoji: text;
+    }
 
     footer {
-      margin-top: 100px;
-
+      margin-top: 130px;
       padding-top: 30px;
-
+      border-top: 1px solid rgba(255,255,255,.12);
       display: flex;
-
       justify-content: space-between;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,0.12);
-
+      gap: 25px;
       font-size: 9px;
-
-      letter-spacing: 0.15em;
-
-      opacity: 0.28;
+      letter-spacing: .1em;
+      opacity: .3;
     }
-
-
-    /* =========================================================
-       MOBILE
-    ========================================================= */
 
     @media (max-width: 700px) {
 
@@ -389,230 +209,161 @@
       }
 
       main {
-        padding:
-          80px
-          20px
-          30px;
+        padding: 130px 20px 45px;
       }
 
       h1 {
-        font-size: 21vw;
-
-        line-height: 0.82;
+        font-size: 19vw;
       }
 
       .intro {
-        margin-top: 45px;
-
-        font-size: 18px;
+        margin-top: 35px;
+        font-size: 15px;
       }
 
-      .epk-list {
-        margin-top: 80px;
+      .epk-grid {
+        margin-top: 75px;
       }
 
       .epk-item {
-        grid-template-columns:
-          35px
-          1fr
-          auto;
-
-        gap: 14px;
-
+        grid-template-columns: 38px minmax(0,1fr) 22px;
+        gap: 12px;
         padding: 28px 0;
       }
 
-      .epk-title {
-        font-size: 8vw;
+      .title {
+        font-size: 22px;
+        line-height: 1.04;
       }
 
-      .epk-description {
-        line-height: 1.5;
+      .action {
+        display: none;
+      }
+
+      .arrow {
+        font-size: 12px;
       }
 
       footer {
+        margin-top: 90px;
         flex-direction: column;
-
-        gap: 12px;
       }
-
     }
-
   </style>
-
 </head>
-
 
 <body>
 
-
 <header>
+  <a class="logo" href="index.html">CG</a>
 
-  <a
-    class="logo"
-    href="index.html"
-    aria-label="Chris Gavin — Home"
-  >
-    CG
+  <a class="back" href="index.html">
+    ← BACK TO SITE
   </a>
-
-  <a
-    class="back"
-    href="index.html"
-  >
-    ← BACK
-  </a>
-
 </header>
-
-
 
 <main>
 
+  <div class="eyebrow">
+    ELECTRONIC PRESS KIT
+  </div>
 
-  <div>
+  <h1>
+    CHRIS GAVIN
+  </h1>
 
+  <div class="intro">
+    Choose the EPK that best matches the context of the booking.
+  </div>
 
-    <div class="eyebrow">
-      PRESS · BOOKING · 2026
-    </div>
+  <div class="epk-grid">
 
+    <a
+      class="epk-item"
+      href="Chris_Gavin_EPK_EN_2026.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-ga-event="click_epk_pdf"
+      data-ga-label="House Progressive"
+    >
+      <div class="number">01</div>
 
-    <h1>
-
-      EPK /<br>
-      PRESS
-
-    </h1>
-
-
-    <div class="intro">
-
-      Select the artistic direction
-      most relevant to your venue,
-      festival or programming.
-
-    </div>
-
-
-    <div class="red-dot"></div>
-
-
-
-    <div class="epk-list">
-
-
-      <!-- =====================================================
-           HOUSE / PROGRESSIVE
-      ====================================================== -->
-
-      <a
-        class="epk-item"
-        href="Chris_Gavin_EPK_EN_2026.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-
-        <div class="epk-index">
-          01
+      <div>
+        <div class="title">
+          HOUSE / PROGRESSIVE
         </div>
 
+        <div class="sub">
+          DJ · PRODUCER · LIVE & CLUB CONTEXT
+        </div>
+      </div>
 
-        <div>
+      <div class="action">
+        OPEN EPK
+      </div>
 
+      <div class="arrow">
+        ↗︎
+      </div>
+    </a>
 
-          <div class="epk-title">
-            HOUSE / PROGRESSIVE
-          </div>
+    <a
+      class="epk-item"
+      href="Chris_Gavin_EPK_2026_Indie_Dark_SlowTechno_EN.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      data-ga-event="click_epk_pdf"
+      data-ga-label="Indie Dark Slow Techno"
+    >
+      <div class="number">02</div>
 
-
-          <div class="epk-description">
-            HOUSE · PROGRESSIVE HOUSE · MELODIC ELECTRONICS
-          </div>
-
-
+      <div>
+        <div class="title">
+          INDIE / DARK / SLOW TECHNO
         </div>
 
-
-        <div class="epk-arrow">
-          ↗
+        <div class="sub">
+          ALTERNATIVE · DARKER · SLOWER
         </div>
+      </div>
 
+      <div class="action">
+        OPEN EPK
+      </div>
 
-      </a>
-
-
-
-      <!-- =====================================================
-           INDIE / DARK
-      ====================================================== -->
-
-      <a
-        class="epk-item"
-        href="Chris_Gavin_EPK_2026_Indie_Dark_SlowTechno_EN.pdf"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-
-
-        <div class="epk-index">
-          02
-        </div>
-
-
-        <div>
-
-
-          <div class="epk-title">
-            INDIE / DARK
-          </div>
-
-
-          <div class="epk-description">
-            INDIE DANCE · DARK DISCO · SLOW TECHNO
-          </div>
-
-
-        </div>
-
-
-        <div class="epk-arrow">
-          ↗
-        </div>
-
-
-      </a>
-
-
-    </div>
-
+      <div class="arrow">
+        ↗︎
+      </div>
+    </a>
 
   </div>
 
-
-
   <footer>
-
-
-    <span>
-      © 2026 CHRIS GAVIN
-    </span>
-
-
-    <a
-      href="mailto:booking@djchrisgavin.com"
-    >
-      BOOKING@DJCHRISGAVIN.COM
-    </a>
-
-
+    <span>CHRIS GAVIN © 2026</span>
+    <span>MARSEILLE · FRANCE</span>
   </footer>
-
 
 </main>
 
+<!-- GA4 EPK PDF TRACKING -->
+<script>
+  document.addEventListener('click', function(event) {
+    const link = event.target.closest('[data-ga-event]');
+
+    if (!link) {
+      return;
+    }
+
+    if (typeof gtag !== 'function') {
+      return;
+    }
+
+    gtag('event', link.dataset.gaEvent, {
+      item_name: link.dataset.gaLabel || '',
+      link_url: link.href
+    });
+  });
+</script>
 
 </body>
-
 </html>
