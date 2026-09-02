@@ -1,4 +1,6 @@
 (() => {
+  const LAST_TRACK_KEY = 'cgRadioLastTrack';
+
   const initRadio = () => {
     const iframe = document.getElementById('cg-radio-frame');
     const toggle = document.querySelector('[data-role="toggle"]');
@@ -18,6 +20,29 @@
     let playing = false;
     let ready = false;
     let gestureArmed = false;
+
+    const soundKey = (sound) => {
+      if (!sound) return '';
+      return String(sound.permalink_url || sound.id || sound.title || '');
+    };
+
+    const getLastTrackKey = () => {
+      try {
+        return localStorage.getItem(LAST_TRACK_KEY) || '';
+      } catch (_) {
+        return '';
+      }
+    };
+
+    const rememberTrack = (sound) => {
+      const key = soundKey(sound);
+      if (!key) return;
+      try {
+        localStorage.setItem(LAST_TRACK_KEY, key);
+      } catch (_) {
+        // Storage may be unavailable in private/restricted browser modes.
+      }
+    };
 
     const setSoundMeta = (sound) => {
       if (!sound) return;
@@ -39,17 +64,35 @@
       });
     };
 
+    // Pick a random track, but never immediately repeat the track heard on the
+    // previous visit. Also avoid repeating the currently selected track on NEXT.
     const randomIndex = () => {
       if (!sounds.length) return 0;
       if (sounds.length === 1) return 0;
-      let index = Math.floor(Math.random() * sounds.length);
-      if (index === currentIndex) index = (index + 1) % sounds.length;
-      return index;
+
+      const previousVisitKey = getLastTrackKey();
+      let candidates = sounds
+        .map((sound, index) => ({ sound, index }))
+        .filter(({ sound, index }) => index !== currentIndex && soundKey(sound) !== previousVisitKey);
+
+      // Fallback if the list is unusually small or contains duplicate metadata.
+      if (!candidates.length) {
+        candidates = sounds
+          .map((sound, index) => ({ sound, index }))
+          .filter(({ index }) => index !== currentIndex);
+      }
+
+      const picked = candidates[Math.floor(Math.random() * candidates.length)];
+      return picked ? picked.index : 0;
     };
 
     const selectIndex = (index) => {
       currentIndex = index;
-      if (sounds[index]) setSoundMeta(sounds[index]);
+      const sound = sounds[index];
+      if (sound) {
+        setSoundMeta(sound);
+        rememberTrack(sound);
+      }
       widget.skip(index);
     };
 
@@ -116,6 +159,7 @@
           return;
         }
 
+        // Every fresh arrival/reload gets a track different from the previous visit.
         const index = randomIndex();
         selectIndex(index);
 
@@ -146,6 +190,18 @@
       title.textContent = 'RADIO UNAVAILABLE';
       playing = false;
       updateToggle();
+    });
+
+    // Safari can restore the homepage from its back/forward cache without a full
+    // reload. Treat that as a new arrival too and choose a new track.
+    window.addEventListener('pageshow', (event) => {
+      if (!event.persisted || !ready || !sounds.length) return;
+      const index = randomIndex();
+      selectIndex(index);
+      playing = false;
+      updateToggle();
+      window.setTimeout(() => widget.play(), 100);
+      armFirstGestureStart();
     });
 
     window.setTimeout(() => {
