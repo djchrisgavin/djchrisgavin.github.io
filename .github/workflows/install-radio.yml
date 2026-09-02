@@ -1,0 +1,63 @@
+name: Install Chris Gavin Radio
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/install-radio.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  patch-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Patch index.html
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          path = Path('index.html')
+          html = path.read_text(encoding='utf-8')
+
+          # Prioritize only the above-the-fold hero image. Other images are lazy-loaded.
+          if 'href="radio.css"' not in html:
+              needle = '  <link rel="canonical" href="https://djchrisgavin.com/">'
+              replacement = '''  <link rel="preconnect" href="https://w.soundcloud.com" crossorigin>\n  <link rel="dns-prefetch" href="//w.soundcloud.com">\n  <link rel="preload" as="image" href="chris-gavin-hero.jpeg" fetchpriority="high">\n  <link rel="stylesheet" href="radio.css">\n\n''' + needle
+              html = html.replace(needle, replacement, 1)
+
+          # Native lazy loading + async decoding for all content images (hero is a CSS background).
+          def optimize_img(match):
+              tag = match.group(0)
+              if 'loading=' not in tag:
+                  tag = tag.replace('<img', '<img loading="lazy" decoding="async"', 1)
+              return tag
+
+          html = re.sub(r'<img\b[^>]*>', optimize_img, html, flags=re.IGNORECASE | re.DOTALL)
+
+          radio_markup = '''\n<!-- CHRIS GAVIN RADIO -->\n<iframe\n  id="cg-radio-frame"\n  class="cg-radio-frame"\n  title="Chris Gavin Radio — SoundCloud"\n  allow="autoplay"\n  loading="lazy"\n  src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/djchrisgavin&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false"\n></iframe>\n\n<div class="cg-radio" role="region" aria-label="Chris Gavin Radio">\n  <div class="cg-radio-info">\n    <span class="cg-radio-live">RADIO</span>\n    <div class="cg-radio-track-wrap">\n      <span class="cg-radio-track" data-role="track-title">CHRIS GAVIN RADIO</span>\n      <a\n        class="cg-radio-source"\n        data-role="source"\n        href="https://soundcloud.com/djchrisgavin"\n        target="_blank"\n        rel="noopener noreferrer"\n      >SOUNDCLOUD ↗</a>\n    </div>\n  </div>\n  <button class="cg-radio-button" data-role="toggle" type="button" aria-label="Play Chris Gavin Radio">PLAY</button>\n  <button class="cg-radio-button" data-role="next" type="button" aria-label="Play another random track">NEXT</button>\n</div>\n'''
+
+          if 'id="cg-radio-frame"' not in html:
+              html = html.replace('\n<!-- GA4 CLICK TRACKING -->', radio_markup + '\n<!-- GA4 CLICK TRACKING -->', 1)
+
+          scripts = '''\n<!-- SOUNDCLOUD RADIO -->\n<script defer src="https://w.soundcloud.com/player/api.js"></script>\n<script defer src="radio.js"></script>\n'''
+          if 'src="radio.js"' not in html:
+              html = html.replace('\n</body>', scripts + '\n</body>', 1)
+
+          path.write_text(html, encoding='utf-8')
+
+      - name: Commit site optimization
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "No changes needed"
+          else
+            git commit -m "Enable mobile radio and lazy loading"
+            git push
+          fi
