@@ -16,6 +16,11 @@
   <meta name="theme-color" content="#090909">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://w.soundcloud.com" crossorigin>
+  <link rel="dns-prefetch" href="//w.soundcloud.com">
+  <link rel="preload" as="image" href="chris-gavin-hero.jpeg" fetchpriority="high">
+  <link rel="stylesheet" href="radio.css">
+
   <link rel="canonical" href="https://djchrisgavin.com/">
 
   <!-- OPEN GRAPH -->
@@ -1110,7 +1115,7 @@
       <div>
 
         <div class="about-photo">
-          <img
+          <img loading="lazy" decoding="async"
             src="Chris gavin 2023.jpg"
             alt="Chris Gavin"
           >
@@ -1142,7 +1147,7 @@
     <div class="music-release">
 
       <div class="cover-wrap">
-        <img
+        <img loading="lazy" decoding="async"
           src="enough-ep.jpg"
           alt="Chris Gavin — E-Nough EP"
         >
@@ -1471,7 +1476,7 @@
       <div class="live-visual">
 
         <div class="live-image">
-          <img
+          <img loading="lazy" decoding="async"
             src="Chris-Gavin_Live-CarpeDiem-2025_KarelRichtr_01.jpg"
             alt="Chris Gavin live at Carpe Diem Experience"
           >
@@ -1649,6 +1654,34 @@
 
 </main>
 
+<!-- CHRIS GAVIN RADIO -->
+<iframe
+  id="cg-radio-frame"
+  class="cg-radio-frame"
+  title="Chris Gavin Radio — SoundCloud"
+  allow="autoplay"
+  loading="lazy"
+  src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/djchrisgavin&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false"
+></iframe>
+
+<div class="cg-radio" role="region" aria-label="Chris Gavin Radio">
+  <div class="cg-radio-info">
+    <span class="cg-radio-live">RADIO</span>
+    <div class="cg-radio-track-wrap">
+      <span class="cg-radio-track" data-role="track-title">CHRIS GAVIN RADIO</span>
+      <a
+        class="cg-radio-source"
+        data-role="source"
+        href="https://soundcloud.com/djchrisgavin"
+        target="_blank"
+        rel="noopener noreferrer"
+      >SOUNDCLOUD ↗</a>
+    </div>
+  </div>
+  <button class="cg-radio-button" data-role="toggle" type="button" aria-label="Play Chris Gavin Radio">PLAY</button>
+  <button class="cg-radio-button" data-role="next" type="button" aria-label="Play another random track">NEXT</button>
+</div>
+
 <!-- GA4 CLICK TRACKING -->
 <script>
   document.addEventListener('click', function(event) {
@@ -1673,6 +1706,10 @@
     });
   });
 </script>
+
+<!-- SOUNDCLOUD RADIO -->
+<script defer src="https://w.soundcloud.com/player/api.js"></script>
+<script defer src="radio.js"></script>
 
 </body>
 </html>
