@@ -1,6 +1,4 @@
 (() => {
-  const PROFILE_URL = 'https://soundcloud.com/djchrisgavin';
-
   const initRadio = () => {
     const iframe = document.getElementById('cg-radio-frame');
     const toggle = document.querySelector('[data-role="toggle"]');
@@ -9,6 +7,10 @@
     const source = document.querySelector('[data-role="source"]');
 
     if (!iframe || !toggle || !next || !title || typeof SC === 'undefined') return;
+
+    // The radio engine must load immediately; lazy loading is reserved for visual content.
+    iframe.loading = 'eager';
+    iframe.removeAttribute('loading');
 
     const widget = SC.Widget(iframe);
     let sounds = [];
