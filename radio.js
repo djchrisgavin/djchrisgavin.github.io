@@ -17,6 +17,15 @@
     let currentIndex = -1;
     let playing = false;
     let ready = false;
+    let gestureArmed = false;
+
+    const setSoundMeta = (sound) => {
+      if (!sound) return;
+      const soundTitle = sound.title || 'CHRIS GAVIN RADIO';
+      title.textContent = soundTitle.toUpperCase();
+      title.title = soundTitle;
+      if (source && sound.permalink_url) source.href = sound.permalink_url;
+    };
 
     const updateToggle = () => {
       toggle.textContent = playing ? 'PAUSE' : 'PLAY';
@@ -24,14 +33,9 @@
     };
 
     const updateCurrentTrack = () => {
-      widget.getCurrentSound((sound) => {
-        if (!sound) return;
-        title.textContent = (sound.title || 'CHRIS GAVIN RADIO').toUpperCase();
-        title.title = sound.title || 'Chris Gavin Radio';
-        if (source && sound.permalink_url) source.href = sound.permalink_url;
-      });
+      widget.getCurrentSound((sound) => setSoundMeta(sound));
       widget.getCurrentSoundIndex((index) => {
-        currentIndex = typeof index === 'number' ? index : currentIndex;
+        if (typeof index === 'number') currentIndex = index;
       });
     };
 
@@ -43,17 +47,46 @@
       return index;
     };
 
-    const playRandom = (autoplayAttempt = false) => {
-      if (!ready) return;
-      const index = randomIndex();
+    const selectIndex = (index) => {
       currentIndex = index;
+      if (sounds[index]) setSoundMeta(sounds[index]);
       widget.skip(index);
+    };
+
+    const playRandom = (autoplayAttempt = false) => {
+      if (!ready || !sounds.length) return;
+      const index = randomIndex();
+      selectIndex(index);
       window.setTimeout(() => {
         widget.play();
         if (!autoplayAttempt && typeof gtag === 'function') {
-          gtag('event', 'radio_next', { item_name: 'Chris Gavin Radio' });
+          gtag('event', 'radio_next', { item_name: sounds[index]?.title || 'Chris Gavin Radio' });
         }
-      }, 120);
+      }, 90);
+    };
+
+    // Safari/iOS blocks audible autoplay. Once SoundCloud is ready, the first
+    // user gesture anywhere on the page starts the already-selected track.
+    const startOnFirstGesture = () => {
+      if (!ready || playing) return;
+      widget.play();
+    };
+
+    const armFirstGestureStart = () => {
+      if (gestureArmed) return;
+      gestureArmed = true;
+      const opts = { capture: true, passive: true };
+      document.addEventListener('pointerdown', startOnFirstGesture, opts);
+      document.addEventListener('touchstart', startOnFirstGesture, opts);
+      document.addEventListener('keydown', startOnFirstGesture, { capture: true });
+    };
+
+    const disarmFirstGestureStart = () => {
+      if (!gestureArmed) return;
+      gestureArmed = false;
+      document.removeEventListener('pointerdown', startOnFirstGesture, true);
+      document.removeEventListener('touchstart', startOnFirstGesture, true);
+      document.removeEventListener('keydown', startOnFirstGesture, true);
     };
 
     toggle.addEventListener('click', () => {
@@ -76,18 +109,27 @@
       widget.setVolume(58);
       widget.getSounds((list) => {
         sounds = Array.isArray(list) ? list : [];
-        const index = randomIndex();
-        currentIndex = index;
-        if (sounds.length) widget.skip(index);
-        updateCurrentTrack();
 
-        // Browsers may reject audible autoplay. We try once; the visible PLAY button is the fallback.
-        window.setTimeout(() => widget.play(), 180);
+        if (!sounds.length) {
+          title.textContent = 'CHRIS GAVIN RADIO';
+          armFirstGestureStart();
+          return;
+        }
+
+        const index = randomIndex();
+        selectIndex(index);
+
+        // Try audible autoplay on browsers that permit it.
+        window.setTimeout(() => widget.play(), 120);
+
+        // On Safari/iPhone the first normal interaction anywhere starts playback.
+        armFirstGestureStart();
       });
     });
 
     widget.bind(SC.Widget.Events.PLAY, () => {
       playing = true;
+      disarmFirstGestureStart();
       updateToggle();
       updateCurrentTrack();
     });
@@ -95,6 +137,7 @@
     widget.bind(SC.Widget.Events.PAUSE, () => {
       playing = false;
       updateToggle();
+      armFirstGestureStart();
     });
 
     widget.bind(SC.Widget.Events.FINISH, () => playRandom(true));
