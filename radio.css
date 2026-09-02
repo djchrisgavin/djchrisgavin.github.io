@@ -1,0 +1,204 @@
+/* CHRIS GAVIN RADIO + MOBILE PERFORMANCE */
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  padding-bottom: calc(66px + env(safe-area-inset-bottom));
+}
+
+.cg-radio {
+  position: fixed;
+  left: 18px;
+  right: 18px;
+  bottom: calc(14px + env(safe-area-inset-bottom));
+  z-index: 300;
+  min-height: 52px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 8px 8px 14px;
+  background: rgba(9, 9, 9, .88);
+  border: 1px solid rgba(241, 240, 235, .16);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .2);
+}
+
+.cg-radio-info {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cg-radio-live {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 8px;
+  letter-spacing: .18em;
+  opacity: .5;
+}
+
+.cg-radio-live::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a42018;
+  box-shadow: 0 0 0 0 rgba(164, 32, 24, .45);
+  animation: cgRadioPulse 2.1s ease-out infinite;
+}
+
+.cg-radio-track-wrap {
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.cg-radio-track {
+  min-width: 0;
+  max-width: min(52vw, 560px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.cg-radio-source {
+  flex: 0 0 auto;
+  font-size: 7px;
+  letter-spacing: .14em;
+  opacity: .35;
+}
+
+.cg-radio-source:hover {
+  opacity: .75;
+}
+
+.cg-radio-button {
+  min-width: 44px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12px;
+  border: 0;
+  border-left: 1px solid rgba(241, 240, 235, .12);
+  background: transparent;
+  color: #f1f0eb;
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: .14em;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cg-radio-button:hover,
+.cg-radio-button:focus-visible {
+  background: rgba(241, 240, 235, .07);
+  outline: none;
+}
+
+.cg-radio-button[data-role="toggle"] {
+  min-width: 72px;
+}
+
+.cg-radio-frame {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  left: -9999px;
+  bottom: 0;
+  border: 0;
+  opacity: .001;
+  pointer-events: none;
+}
+
+@keyframes cgRadioPulse {
+  0% { box-shadow: 0 0 0 0 rgba(164, 32, 24, .45); }
+  70% { box-shadow: 0 0 0 6px rgba(164, 32, 24, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(164, 32, 24, 0); }
+}
+
+@media (max-width: 700px) {
+  body {
+    padding-bottom: calc(62px + env(safe-area-inset-bottom));
+  }
+
+  .hero {
+    min-height: 100svh;
+    min-height: 100dvh;
+  }
+
+  header {
+    padding-top: calc(18px + env(safe-area-inset-top));
+  }
+
+  nav {
+    max-width: calc(100vw - 58px);
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .cg-radio {
+    left: 8px;
+    right: 8px;
+    bottom: calc(7px + env(safe-area-inset-bottom));
+    min-height: 48px;
+    grid-template-columns: minmax(0, 1fr) 54px 54px;
+    gap: 0;
+    padding: 5px 0 5px 11px;
+    border-color: rgba(241, 240, 235, .2);
+  }
+
+  .cg-radio-info {
+    gap: 8px;
+  }
+
+  .cg-radio-live {
+    font-size: 7px;
+    letter-spacing: .12em;
+  }
+
+  .cg-radio-track-wrap {
+    display: block;
+  }
+
+  .cg-radio-track {
+    max-width: 100%;
+    font-size: 9px;
+    letter-spacing: .08em;
+  }
+
+  .cg-radio-source {
+    display: none;
+  }
+
+  .cg-radio-button,
+  .cg-radio-button[data-role="toggle"] {
+    width: 54px;
+    min-width: 54px;
+    height: 42px;
+    padding: 0;
+    font-size: 9px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cg-radio-live::before {
+    animation: none;
+  }
+}
