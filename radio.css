@@ -67,8 +67,10 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 10px;
-  letter-spacing: .12em;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  opacity: 1;
 }
 
 .cg-radio-source {
@@ -130,7 +132,7 @@ body {
 
 @media (max-width: 700px) {
   body {
-    padding-bottom: calc(62px + env(safe-area-inset-bottom));
+    padding-bottom: calc(66px + env(safe-area-inset-bottom));
   }
 
   .hero {
@@ -157,30 +159,41 @@ body {
     left: 8px;
     right: 8px;
     bottom: calc(7px + env(safe-area-inset-bottom));
-    min-height: 48px;
+    min-height: 54px;
     grid-template-columns: minmax(0, 1fr) 54px 54px;
     gap: 0;
-    padding: 5px 0 5px 11px;
+    padding: 6px 0 6px 11px;
     border-color: rgba(241, 240, 235, .2);
   }
 
   .cg-radio-info {
-    gap: 8px;
+    min-width: 0;
+    display: block;
+    padding-right: 8px;
   }
 
   .cg-radio-live {
+    display: flex;
+    margin-bottom: 4px;
     font-size: 7px;
     letter-spacing: .12em;
   }
 
   .cg-radio-track-wrap {
     display: block;
+    min-width: 0;
   }
 
   .cg-radio-track {
+    display: block;
     max-width: 100%;
-    font-size: 9px;
-    letter-spacing: .08em;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: .055em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .cg-radio-source {
@@ -191,7 +204,7 @@ body {
   .cg-radio-button[data-role="toggle"] {
     width: 54px;
     min-width: 54px;
-    height: 42px;
+    height: 44px;
     padding: 0;
     font-size: 9px;
   }
